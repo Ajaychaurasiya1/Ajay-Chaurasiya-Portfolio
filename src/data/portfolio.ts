@@ -23,7 +23,7 @@ export const portfolioData: PortfolioData = {
     availability: "Working at Jupiter AI Labs",
     stats: [
       { value: "9 Mo", label: "Experience" },
-      { value: "7+", label: "Projects" },
+      { value: "8+", label: "Projects" },
       { value: "MERN", label: "Stack" },
       { value: "2", label: "Companies" },
     ],
@@ -126,7 +126,7 @@ export const portfolioData: PortfolioData = {
         "I specialize in building full stack web products across four core domains, from multi-role marketplaces and AI platforms to analytics dashboards and polished business websites. Each area reflects real projects I've shipped or built end to end.",
       stats: [
         { value: "4", label: "Core Domains" },
-        { value: "7+", label: "Projects Shipped" },
+        { value: "8+", label: "Projects Shipped" },
         { value: "Full Stack", label: "Build Approach" },
         { value: "MERN", label: "Primary Stack" },
       ],
@@ -427,9 +427,9 @@ export const portfolioData: PortfolioData = {
     description:
       "A mix of professional work and personal projects spanning marketplaces, AI evaluation systems, analytics dashboards, and full-stack web applications. Each project reflects hands-on experience across frontend, backend, and database layers.",
     stats: [
-      { value: "7", label: "Total Projects" },
+      { value: "8", label: "Total Projects" },
       { value: "4", label: "Work Projects" },
-      { value: "3", label: "Side Projects" },
+      { value: "4", label: "Side Projects" },
       { value: "Full Stack", label: "My Approach" },
     ],
   },
@@ -552,6 +552,36 @@ export const portfolioData: PortfolioData = {
         "Designed data-heavy UI that stays readable and actionable",
         "Integrated charting for metrics and trend analysis",
         "Built reporting flows for team-level insights",
+      ],
+    },
+    {
+      id: "resumforge",
+      title: "Resumforge",
+      category: "side",
+      type: "Resume Builder",
+      role: "Full Stack Developer",
+      status: "Live",
+      description:
+        "Modern resume builder for creating professional, ATS-friendly resumes with live preview, templates, and PDF export.",
+      longDescription:
+        "Resumforge is a full-featured resume creation platform that helps users build polished, job-ready resumes without design friction. It combines a structured section-based editor with real-time preview, professional templates, and one-click PDF export so users can go from blank page to downloadable resume in minutes.",
+      problem:
+        "Job seekers often struggle with formatting resumes, keeping content consistent across sections, and exporting a clean PDF that works with ATS systems.",
+      solution:
+        "Built an intuitive resume builder with guided sections, live preview, reusable templates, and reliable PDF export for professional, ATS-friendly output.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS", "React.js", "PDF Export"],
+      tags: ["SaaS", "Productivity", "Resume"],
+      features: [
+        "Section-based resume editor (experience, education, skills)",
+        "Real-time live preview as content updates",
+        "Professional resume templates",
+        "One-click PDF download and export",
+        "Clean, responsive UI for fast resume creation",
+      ],
+      highlights: [
+        "Designed a guided workflow for building resumes section by section",
+        "Implemented live preview for instant visual feedback",
+        "Built PDF export for polished, shareable resume output",
       ],
     },
     {
