@@ -6,6 +6,7 @@ export const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -757,6 +758,35 @@ export const portfolioData: PortfolioData = {
         "Client-facing web applications",
         "Internal business tools",
         "API-driven dashboard features",
+      ],
+    },
+  ],
+  educationSection: {
+    tagline:
+      "Bachelor of Technology in Computer Science and Engineering from Dr. A. P. J. Abdul Kalam Technical University.",
+    description:
+      "Completed a four-year undergraduate program focused on core computer science fundamentals, software engineering, and practical development. Graduated with an honors degree and a strong academic record.",
+    stats: [
+      { value: "4 Yrs", label: "Duration" },
+      { value: "8.0", label: "GPA" },
+      { value: "Honors", label: "Degree" },
+      { value: "B.Tech", label: "Qualification" },
+    ],
+  },
+  education: [
+    {
+      id: "aktu-btech-cse",
+      institution: "Dr. A. P. J. Abdul Kalam Technical University",
+      degree: "Bachelor of Technology",
+      field: "Computer Science and Engineering",
+      duration: "2021 - 2025",
+      period: "Undergraduate",
+      gpa: "8.0",
+      honors: "Honors Degree",
+      highlights: [
+        "Completed B.Tech in Computer Science and Engineering",
+        "Graduated with an honors degree",
+        "Built strong foundations in algorithms, data structures, and software development",
       ],
     },
   ],

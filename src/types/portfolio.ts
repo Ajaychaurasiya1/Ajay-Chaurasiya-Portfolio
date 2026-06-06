@@ -92,6 +92,24 @@ export interface ExperienceSectionData {
   stats: AboutStat[];
 }
 
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  field: string;
+  duration: string;
+  period: string;
+  gpa: string;
+  honors: string;
+  highlights: string[];
+}
+
+export interface EducationSectionData {
+  tagline: string;
+  description: string;
+  stats: AboutStat[];
+}
+
 export interface SocialLink {
   name: string;
   href: string;
@@ -184,6 +202,8 @@ export interface PortfolioData {
   projects: Project[];
   experienceSection: ExperienceSectionData;
   experience: Experience[];
+  educationSection: EducationSectionData;
+  education: Education[];
   contactSection: ContactSectionData;
   socialLinks: SocialLink[];
   email: string;
