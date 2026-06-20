@@ -21,9 +21,9 @@ export const portfolioData: PortfolioData = {
     tagline:
       "I craft full stack web products, from marketplaces and AI platforms to dashboards and modern business websites.",
     location: "India · Open to Remote",
-    availability: "Working at Jupiter AI Labs",
+    availability: "Open to Opportunities",
     stats: [
-      { value: "9 Mo", label: "Experience" },
+      { value: "10 Mo", label: "Experience" },
       { value: "8+", label: "Projects" },
       { value: "MERN", label: "Stack" },
       { value: "2", label: "Companies" },
@@ -45,7 +45,7 @@ export const portfolioData: PortfolioData = {
     paragraphs: [
       "I'm Ajay Chaurasiya, a Full Stack Developer passionate about building products that solve real business problems. I work across the entire stack, from crafting responsive interfaces with React and Next.js to designing robust REST APIs with Node.js and Express, backed by MongoDB databases.",
       "My experience spans marketplace platforms, human-in-the-loop AI evaluation systems, analytics dashboards, and corporate websites. I enjoy owning features end-to-end: scoping requirements, implementing frontend and backend logic, integrating databases, and shipping polished experiences ready for production.",
-      "Currently at Jupiter AI Labs as a Full Stack Developer, I work on AI platform development, dashboard tooling, and full-stack features used in live products. I care about clean architecture, maintainable code, and interfaces that feel fast and intentional, not just functional.",
+      "At Jupiter AI Labs, I worked as a Full Stack Developer on AI platform development, dashboard tooling, and full-stack features used in live products. I care about clean architecture, maintainable code, and interfaces that feel fast and intentional, not just functional.",
       "Whether it's a SaaS product, an internal dashboard, or a client-facing platform, I focus on building software that is reliable, scalable, and easy to iterate on as products grow.",
     ],
     coreStrengths: {
@@ -54,7 +54,7 @@ export const portfolioData: PortfolioData = {
         "Beyond writing code, I focus on owning outcomes, from architecture and implementation to polish and delivery. These core strengths shape how I approach every product I build.",
       stats: [
         { value: "3", label: "Core Pillars" },
-        { value: "9 Mo", label: "Applied Experience" },
+        { value: "10 Mo", label: "Applied Experience" },
         { value: "E2E", label: "Feature Ownership" },
         { value: "Quality", label: "First Approach" },
       ],
@@ -209,7 +209,7 @@ export const portfolioData: PortfolioData = {
     stats: [
       { value: "4+", label: "Major Projects" },
       { value: "MERN", label: "Primary Stack" },
-      { value: "9 Mo", label: "Industry Experience" },
+      { value: "10 Mo", label: "Industry Experience" },
       { value: "100%", label: "End-to-End Delivery" },
     ],
   },
@@ -221,7 +221,7 @@ export const portfolioData: PortfolioData = {
       { value: "15+", label: "Technologies" },
       { value: "4", label: "Skill Domains" },
       { value: "MERN", label: "Primary Stack" },
-      { value: "9 Mo", label: "Hands-on Use" },
+      { value: "10 Mo", label: "Hands-on Use" },
     ],
     development: {
       tagline: "A structured process from idea to production-ready software.",
@@ -677,12 +677,12 @@ export const portfolioData: PortfolioData = {
     },
   ],
   experienceSection: {
-    tagline: "Currently building AI products at Jupiter AI Labs, with hands-on MERN stack experience across two companies.",
+    tagline: "Hands-on MERN stack experience across Cuvet Tech and Jupiter AI Labs.",
     description:
-      "I started at Cuvet Tech as a MERN Stack Developer and now work full time at Jupiter AI Labs as a Full Stack Developer since March 2026, building AI platforms, dashboards, and corporate products with end-to-end ownership across frontend, backend, and database layers.",
+      "I started at Cuvet Tech as a MERN Stack Developer, then worked at Jupiter AI Labs as a Full Stack Developer from March 2026 to June 2026, building AI platforms, dashboards, and corporate products with end-to-end ownership across frontend, backend, and database layers.",
     stats: [
       { value: "2", label: "Companies" },
-      { value: "9 Mo", label: "Total Experience" },
+      { value: "10 Mo", label: "Total Experience" },
       { value: "MERN", label: "Core Stack" },
       { value: "5+", label: "Products Built" },
     ],
@@ -693,11 +693,11 @@ export const portfolioData: PortfolioData = {
       company: "Jupiter AI Labs",
       role: "Full Stack Developer",
       employmentType: "Full-time",
-      duration: "March 2026 - Present",
-      period: "Current Role",
+      duration: "March 2026 - June 2026",
+      period: "Previous Role",
       location: "Noida",
       summary:
-        "Currently working as a Full Stack Developer on AI-focused products including evaluation platforms, analytics dashboards, and corporate web experiences. Building features across the stack used in live AI and data products.",
+        "Worked as a Full Stack Developer on AI-focused products including evaluation platforms, analytics dashboards, and corporate web experiences. Built features across the stack used in live AI and data products.",
       techStack: [
         "React.js",
         "Next.js",
@@ -794,7 +794,7 @@ export const portfolioData: PortfolioData = {
     tagline: "Let's build something great together.",
     description:
       "I'm open to full-time roles, freelance projects, internships, and collaborations. Whether you need a MERN stack developer, help with an AI platform, or a modern web product, I'd love to hear from you.",
-    availability: "Working at Jupiter AI Labs",
+    availability: "Open to Opportunities",
     responseTime: "Within 24 to 48 hours",
     location: "India · Remote Friendly",
     stats: [

@@ -158,7 +158,7 @@ export function Hero() {
                 <div className="flex items-center gap-3 rounded-xl bg-background/40 px-4 py-3">
                   <Briefcase className="h-4 w-4 shrink-0 text-accent" />
                   <span className="text-sm text-muted">
-                    Jupiter AI Labs · Since March 2026
+                    Jupiter AI Labs · Mar 2026 - Jun 2026
                   </span>
                 </div>
               </div>
