@@ -229,12 +229,7 @@ export const portfolioData: PortfolioData = {
       tagline: "A structured process from idea to production-ready software.",
       description:
         "I don't just write code. I follow a deliberate development workflow and set of practices that keep projects organized, maintainable, and ready to ship. Every feature moves through planning, building, testing, and deployment with quality in mind.",
-      stats: [
-        { value: "5", label: "Workflow Stages" },
-        { value: "6", label: "Core Practices" },
-        { value: "E2E", label: "Process Coverage" },
-        { value: "Quality", label: "Driven Delivery" },
-      ],
+      stats: [],
       workflow: [
         {
           step: "01",
