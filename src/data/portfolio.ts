@@ -14,12 +14,12 @@ export const portfolioData: PortfolioData = {
   name: "Ajay Chaurasiya",
   title: "Full Stack Developer",
   subtitle:
-    "Building AI Platforms, SaaS Products, Dashboards, and Modern Web Applications.",
+    "Building AI platforms, SaaS products, dashboards, and modern web applications across the full stack.",
   hero: {
     greeting: "Hi, I'm",
-    badge: "MERN Stack · AI Platforms · SaaS Development",
+    badge: "MERN Stack · AI Platforms · SaaS",
     tagline:
-      "I craft full stack web products, from marketplaces and AI platforms to dashboards and modern business websites.",
+      "From marketplaces and AI evaluation systems to analytics dashboards and corporate websites.",
     location: "India · Open to Remote",
     availability: "Open to Opportunities",
     stats: [

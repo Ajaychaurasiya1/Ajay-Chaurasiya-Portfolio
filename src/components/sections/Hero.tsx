@@ -1,9 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Code2, Sparkles } from "lucide-react";
+import { ArrowDown, Code2, MapPin } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { Button } from "@/components/ui/Button";
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay },
+});
 
 export function Hero() {
   const { name, title, subtitle, hero } = portfolioData;
@@ -18,90 +24,111 @@ export function Hero() {
       <div className="absolute -right-20 bottom-1/4 h-[28rem] w-[28rem] rounded-full bg-violet-500/10 blur-3xl" />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-16">
-        <div className="mx-auto max-w-3xl">
-          <div className="text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-card-border bg-card/50 px-4 py-2 text-sm text-muted backdrop-blur-sm"
-            >
-              <Sparkles className="h-4 w-4 shrink-0 text-accent" />
-              <span>{hero.badge}</span>
-            </motion.div>
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          {/* Meta */}
+          <motion.div
+            {...fadeUp(0)}
+            className="mb-8 flex flex-wrap items-center justify-center gap-3"
+          >
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              {hero.availability}
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-sm text-muted">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-accent" />
+              {hero.location}
+            </span>
+          </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
-            >
-              {hero.greeting}{" "}
-              <span className="gradient-text">{name}</span>
-            </motion.h1>
+          {/* Headline */}
+          <motion.p
+            {...fadeUp(0.05)}
+            className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted"
+          >
+            {hero.greeting}
+          </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-3 text-2xl font-semibold text-foreground sm:text-3xl"
-            >
-              {title}
-            </motion.p>
+          <motion.h1
+            {...fadeUp(0.1)}
+            className="mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+          >
+            <span className="gradient-text">{name}</span>
+          </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="mb-4 text-base leading-relaxed text-muted sm:text-lg"
-            >
+          <motion.p
+            {...fadeUp(0.15)}
+            className="mb-6 text-2xl font-semibold text-foreground sm:text-3xl"
+          >
+            {title}
+          </motion.p>
+
+          {/* Description */}
+          <motion.div
+            {...fadeUp(0.2)}
+            className="mb-8 max-w-2xl space-y-3"
+          >
+            <p className="text-base leading-relaxed text-foreground sm:text-lg">
               {subtitle}
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-muted/90 lg:mx-0"
-            >
+            </p>
+            <p className="text-sm leading-relaxed text-muted sm:text-base">
               {hero.tagline}
-            </motion.p>
+            </p>
+          </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"
-            >
-              <Button href={hero.ctaPrimary.href} size="lg">
-                <Code2 className="h-5 w-5" />
-                {hero.ctaPrimary.label}
-              </Button>
-              <Button href={hero.ctaSecondary.href} variant="secondary" size="lg">
-                {hero.ctaSecondary.label}
-              </Button>
-            </motion.div>
+          {/* Focus areas */}
+          <motion.div
+            {...fadeUp(0.25)}
+            className="mb-8 inline-flex rounded-full border border-card-border bg-card/50 px-4 py-2 text-sm text-muted backdrop-blur-sm"
+          >
+            {hero.badge}
+          </motion.div>
 
-            {/* Quick stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:max-w-lg"
-            >
-              {hero.stats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl border border-card-border bg-card/40 px-3 py-3 text-center backdrop-blur-sm"
-                >
-                  <p className="text-lg font-bold gradient-text sm:text-xl">
-                    {stat.value}
-                  </p>
-                  <p className="mt-0.5 text-xs text-muted">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
+          {/* Tech stack */}
+          <motion.div
+            {...fadeUp(0.3)}
+            className="mb-10 flex flex-wrap justify-center gap-2"
+          >
+            {hero.techPills.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-lg border border-card-border bg-card/40 px-3 py-1.5 text-xs font-medium text-foreground backdrop-blur-sm sm:text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div
+            {...fadeUp(0.35)}
+            className="mb-12 flex flex-col items-center gap-4 sm:flex-row"
+          >
+            <Button href={hero.ctaPrimary.href} size="lg">
+              <Code2 className="h-5 w-5" />
+              {hero.ctaPrimary.label}
+            </Button>
+            <Button href={hero.ctaSecondary.href} variant="secondary" size="lg">
+              {hero.ctaSecondary.label}
+            </Button>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            {...fadeUp(0.4)}
+            className="grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-card-border bg-card-border sm:grid-cols-4"
+          >
+            {hero.stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="bg-card/60 px-4 py-5 backdrop-blur-sm sm:px-6"
+              >
+                <p className="text-xl font-bold gradient-text sm:text-2xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
+              </div>
+            ))}
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}
@@ -109,7 +136,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-16 flex justify-center lg:mt-12"
+          className="mt-16 flex justify-center"
         >
           <a
             href="#about"
