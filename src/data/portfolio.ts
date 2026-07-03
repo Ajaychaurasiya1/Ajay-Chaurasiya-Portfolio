@@ -38,6 +38,11 @@ export const portfolioData: PortfolioData = {
         description:
           "Interactive charts, reporting flows, and performance insights for data-heavy applications.",
       },
+      {
+        title: "Marketplaces & Platforms",
+        description:
+          "Multi-role authentication, project lifecycles, vendor-client workflows, and scalable dashboard experiences.",
+      },
     ],
     stats: [
       { value: "10 Mo", label: "Experience" },

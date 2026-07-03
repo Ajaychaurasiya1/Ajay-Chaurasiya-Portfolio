@@ -5,6 +5,7 @@ import {
   ArrowDown,
   BarChart3,
   Code2,
+  Globe,
   Layers,
   MapPin,
   Sparkles,
@@ -18,7 +19,7 @@ const fadeUp = (delay: number) => ({
   transition: { duration: 0.6, delay },
 });
 
-const highlightIcons = [Sparkles, Layers, BarChart3];
+const highlightIcons = [Sparkles, Layers, BarChart3, Globe];
 
 export function Hero() {
   const { name, title, subtitle, hero } = portfolioData;
@@ -33,7 +34,7 @@ export function Hero() {
       <div className="absolute -right-20 bottom-1/4 h-[28rem] w-[28rem] rounded-full bg-violet-500/10 blur-3xl" />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-16">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center text-center">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
           {/* Meta */}
           <motion.div
             {...fadeUp(0)}
@@ -80,7 +81,7 @@ export function Hero() {
           {/* Highlight cards */}
           <motion.div
             {...fadeUp(0.25)}
-            className="mb-10 grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3"
+            className="mb-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             {hero.highlights.map((highlight, index) => {
               const Icon = highlightIcons[index] ?? Sparkles;
