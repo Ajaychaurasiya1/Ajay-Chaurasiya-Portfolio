@@ -5,7 +5,6 @@ import {
   BarChart3,
   Brain,
   CheckCircle2,
-  Code2,
   Globe,
   Hammer,
   Layers,
@@ -53,10 +52,6 @@ export function About() {
                 <p className="text-accent">{portfolioData.title}</p>
               </div>
             </div>
-            <div className="inline-flex items-center gap-2 self-start rounded-full border border-card-border bg-background/50 px-4 py-2 text-sm text-muted sm:self-center">
-              <Code2 className="h-4 w-4 text-accent" />
-              <span>MERN Stack · AI Platforms · SaaS</span>
-            </div>
           </div>
 
           <p className="mb-6 text-lg font-medium leading-relaxed text-foreground">
@@ -71,25 +66,6 @@ export function About() {
             ))}
           </div>
         </motion.div>
-
-        {/* Stats row */}
-        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {about.stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-card-border bg-card/30 p-5 text-center backdrop-blur-sm"
-            >
-              <p className="text-2xl font-bold gradient-text sm:text-3xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-sm text-muted">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
 
         {/* What I build */}
         <motion.div
@@ -117,25 +93,6 @@ export function About() {
             <p className="leading-relaxed text-muted">
               {about.whatIBuild.description}
             </p>
-          </div>
-
-          {/* What I build stats */}
-          <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {about.whatIBuild.stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="rounded-xl border border-card-border bg-card/30 p-4 text-center"
-              >
-                <p className="text-lg font-bold gradient-text sm:text-xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs text-muted">{stat.label}</p>
-              </motion.div>
-            ))}
           </div>
 
           {/* Focus area cards */}
@@ -248,25 +205,6 @@ export function About() {
             <p className="leading-relaxed text-muted">
               {about.coreStrengths.description}
             </p>
-          </div>
-
-          {/* Core strengths stats */}
-          <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-            {about.coreStrengths.stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="rounded-xl border border-card-border bg-card/30 p-4 text-center"
-              >
-                <p className="text-lg font-bold gradient-text sm:text-xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-xs text-muted">{stat.label}</p>
-              </motion.div>
-            ))}
           </div>
 
           {/* Strength cards */}

@@ -49,25 +49,6 @@ export function Skills() {
           </p>
         </motion.div>
 
-        {/* Stats */}
-        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {skillsSection.stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-card-border bg-card/30 p-4 text-center backdrop-blur-sm sm:p-5"
-            >
-              <p className="text-xl font-bold gradient-text sm:text-2xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Skill categories */}
         <div className="mb-14">
           <h3 className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-accent">

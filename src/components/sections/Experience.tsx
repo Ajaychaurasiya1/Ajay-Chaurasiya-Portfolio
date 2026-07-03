@@ -49,25 +49,6 @@ export function Experience() {
           </p>
         </motion.div>
 
-        {/* Stats */}
-        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {experienceSection.stats.map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-card-border bg-card/30 p-4 text-center backdrop-blur-sm sm:p-5"
-            >
-              <p className="text-xl font-bold gradient-text sm:text-2xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-
         {/* Timeline */}
         <div className="relative w-full">
           <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-cyan-500/50 via-violet-500/30 to-transparent sm:left-8 sm:block" />

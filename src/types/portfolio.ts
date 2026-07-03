@@ -125,7 +125,6 @@ export interface ContactReason {
 export interface ContactSectionData {
   tagline: string;
   description: string;
-  availability: string;
   responseTime: string;
   location: string;
   stats: AboutStat[];

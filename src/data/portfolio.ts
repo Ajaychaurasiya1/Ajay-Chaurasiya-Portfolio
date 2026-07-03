@@ -19,7 +19,7 @@ export const portfolioData: PortfolioData = {
     greeting: "Hi, I'm",
     badge: "MERN Stack · AI Platforms · SaaS",
     tagline:
-      "From marketplaces and AI evaluation systems to analytics dashboards and corporate websites.",
+      "I take ideas from concept to production with clean architecture and thoughtful user experience.",
     location: "India · Open to Remote",
     availability: "Open to Opportunities",
     highlights: [
@@ -65,21 +65,16 @@ export const portfolioData: PortfolioData = {
     tagline:
       "Turning complex product ideas into scalable, user-focused web applications.",
     paragraphs: [
-      "I'm Ajay Chaurasiya, a Full Stack Developer passionate about building products that solve real business problems. I work across the entire stack, from crafting responsive interfaces with React and Next.js to designing robust REST APIs with Node.js and Express, backed by MongoDB databases.",
-      "My experience spans marketplace platforms, human-in-the-loop AI evaluation systems, analytics dashboards, and corporate websites. I enjoy owning features end-to-end: scoping requirements, implementing frontend and backend logic, integrating databases, and shipping polished experiences ready for production.",
-      "At Jupiter AI Labs, I worked as a Full Stack Developer on AI platform development, dashboard tooling, and full-stack features used in live products. I care about clean architecture, maintainable code, and interfaces that feel fast and intentional, not just functional.",
-      "Whether it's a SaaS product, an internal dashboard, or a client-facing platform, I focus on building software that is reliable, scalable, and easy to iterate on as products grow.",
+      "I'm Ajay Chaurasiya, a Full Stack Developer who enjoys turning complex requirements into software people actually want to use. I care about how a product feels, not just whether the code works.",
+      "I like owning features end to end: understanding the problem, shaping the UI, building the API, modeling the data, and shipping something polished enough for real users.",
+      "Clean architecture, readable code, and fast interfaces matter to me. I prefer building products that are easy to maintain, iterate on, and scale as teams and requirements grow.",
+      "I'm currently open to full-time roles, freelance work, and collaborations where I can contribute across the stack and help ship meaningful products.",
     ],
     coreStrengths: {
-      tagline: "The skills and mindset I bring to every project.",
+      tagline: "How I approach every project.",
       description:
-        "Beyond writing code, I focus on owning outcomes, from architecture and implementation to polish and delivery. These core strengths shape how I approach every product I build.",
-      stats: [
-        { value: "3", label: "Core Pillars" },
-        { value: "10 Mo", label: "Applied Experience" },
-        { value: "E2E", label: "Feature Ownership" },
-        { value: "Quality", label: "First Approach" },
-      ],
+        "These are the principles that guide my work, from planning and implementation through testing and delivery.",
+      stats: [],
     },
     highlights: [
       {
@@ -104,11 +99,11 @@ export const portfolioData: PortfolioData = {
       },
       {
         id: "ai-saas",
-        title: "AI & SaaS Products",
+        title: "Complex Product Systems",
         description:
-          "Building AI evaluation workflows, role-based platforms, and data-driven SaaS experiences.",
+          "Designing workflow-heavy interfaces with access control, reviewer flows, and data-rich screens.",
         longDescription:
-          "I have hands-on experience building products in the AI and SaaS space, from human-in-the-loop evaluation platforms to multi-role marketplaces and analytics dashboards. I understand the product complexity that comes with reviewer workflows, access control, and data-heavy interfaces.",
+          "Some products need more than CRUD. I enjoy working on systems with layered permissions, multi-step workflows, and interfaces that stay clear even when the logic behind them is complex.",
         keyPoints: [
           "Human-in-the-loop AI evaluation and scoring systems",
           "Multi-role platforms with authentication and permissions",
@@ -144,15 +139,10 @@ export const portfolioData: PortfolioData = {
       },
     ],
     whatIBuild: {
-      tagline: "Products that connect people, evaluate AI, and turn data into decisions.",
+      tagline: "A closer look at the kinds of products I've shipped.",
       description:
-        "I specialize in building full stack web products across four core domains, from multi-role marketplaces and AI platforms to analytics dashboards and polished business websites. Each area reflects real projects I've shipped or built end to end.",
-      stats: [
-        { value: "4", label: "Core Domains" },
-        { value: "8+", label: "Projects Shipped" },
-        { value: "Full Stack", label: "Build Approach" },
-        { value: "MERN", label: "Primary Stack" },
-      ],
+        "Each area below includes real project examples, capabilities, and the stack used to build them.",
+      stats: [],
     },
     focusAreas: [
       {
@@ -228,23 +218,13 @@ export const portfolioData: PortfolioData = {
         techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       },
     ],
-    stats: [
-      { value: "4+", label: "Major Projects" },
-      { value: "MERN", label: "Primary Stack" },
-      { value: "10 Mo", label: "Industry Experience" },
-      { value: "100%", label: "End-to-End Delivery" },
-    ],
+    stats: [],
   },
   skillsSection: {
-    tagline: "A MERN-first toolkit backed by modern development practices.",
+    tagline: "The tools and practices behind my day-to-day development.",
     description:
-      "I work across the full stack, building responsive frontends, scalable APIs, database-driven features, and deploying with industry-standard tools. My skills are shaped by real product work at Cuvet Tech and Jupiter AI Labs, plus personal projects.",
-    stats: [
-      { value: "15+", label: "Technologies" },
-      { value: "4", label: "Skill Domains" },
-      { value: "MERN", label: "Primary Stack" },
-      { value: "10 Mo", label: "Hands-on Use" },
-    ],
+      "From frontend frameworks and backend APIs to databases, testing, and deployment, this is the stack I use to build and ship products.",
+    stats: [],
     development: {
       tagline: "A structured process from idea to production-ready software.",
       description:
@@ -446,9 +426,9 @@ export const portfolioData: PortfolioData = {
     },
   ],
   projectsSection: {
-    tagline: "From AI platforms to SaaS products, here's what I've built.",
+    tagline: "Selected work from professional roles and personal builds.",
     description:
-      "A mix of professional work and personal projects spanning marketplaces, AI evaluation systems, analytics dashboards, and full-stack web applications. Each project reflects hands-on experience across frontend, backend, and database layers.",
+      "Browse projects by category to see the problems they solved, the features shipped, and the technologies used in each build.",
     stats: [
       { value: "8", label: "Total Projects" },
       { value: "4", label: "Work Projects" },
@@ -699,15 +679,10 @@ export const portfolioData: PortfolioData = {
     },
   ],
   experienceSection: {
-    tagline: "Hands-on MERN stack experience across Cuvet Tech and Jupiter AI Labs.",
+    tagline: "Two full-time roles across product-focused engineering teams.",
     description:
-      "I started at Cuvet Tech as a MERN Stack Developer, then worked at Jupiter AI Labs as a Full Stack Developer from March 2026 to June 2026, building AI platforms, dashboards, and corporate products with end-to-end ownership across frontend, backend, and database layers.",
-    stats: [
-      { value: "2", label: "Companies" },
-      { value: "10 Mo", label: "Total Experience" },
-      { value: "MERN", label: "Core Stack" },
-      { value: "5+", label: "Products Built" },
-    ],
+      "My professional experience includes MERN stack development at Cuvet Tech and full stack product work at Jupiter AI Labs, with ownership across frontend, backend, and database layers.",
+    stats: [],
   },
   experience: [
     {
@@ -815,8 +790,7 @@ export const portfolioData: PortfolioData = {
   contactSection: {
     tagline: "Let's build something great together.",
     description:
-      "I'm open to full-time roles, freelance projects, internships, and collaborations. Whether you need a MERN stack developer, help with an AI platform, or a modern web product, I'd love to hear from you.",
-    availability: "Open to Opportunities",
+      "I'm open to full-time roles, freelance projects, internships, and collaborations. Tell me what you're building and I'll get back to you within 24 to 48 hours.",
     responseTime: "Within 24 to 48 hours",
     location: "India · Remote Friendly",
     stats: [

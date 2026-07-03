@@ -92,7 +92,7 @@ export function Contact() {
 
         {/* Main contact grid */}
         <div className="mb-12 grid items-stretch gap-8 lg:grid-cols-2">
-          {/* Left: availability + social */}
+          {/* Left: contact info + social */}
           <div className="flex flex-col gap-6">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -103,7 +103,7 @@ export function Contact() {
             >
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-sm font-medium text-emerald-400">
                 <Sparkles className="h-4 w-4 shrink-0" />
-                {contactSection.availability}
+                {contactSection.responseTime}
               </div>
 
               <div className="space-y-4">
