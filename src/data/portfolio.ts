@@ -45,10 +45,10 @@ export const portfolioData: PortfolioData = {
       },
     ],
     stats: [
-      { value: "10 Mo", label: "Experience" },
+      { value: "12 Mo", label: "Experience" },
       { value: "8+", label: "Projects" },
       { value: "MERN", label: "Stack" },
-      { value: "2", label: "Companies" },
+      { value: "3", label: "Companies" },
     ],
     techPills: [
       "React.js",
@@ -679,9 +679,9 @@ export const portfolioData: PortfolioData = {
     },
   ],
   experienceSection: {
-    tagline: "Two full-time roles across product-focused engineering teams.",
+    tagline: "Full-time product roles and hands-on internship experience.",
     description:
-      "My professional experience includes MERN stack development at Cuvet Tech and full stack product work at Jupiter AI Labs, with ownership across frontend, backend, and database layers.",
+      "My experience spans full stack development at Cuvet Tech and Jupiter AI Labs, plus a web development internship at The Sparks Foundation where I built the UI for a banking system prototype.",
     stats: [],
   },
   experience: [
@@ -756,6 +756,31 @@ export const portfolioData: PortfolioData = {
         "Internal business tools",
         "API-driven dashboard features",
       ],
+    },
+    {
+      id: "sparks-foundation",
+      company: "The Sparks Foundation",
+      role: "Web Developer",
+      employmentType: "Internship",
+      duration: "September 2023 - October 2023",
+      period: "Internship",
+      location: "Remote",
+      summary:
+        "Web Developer intern at The Sparks Foundation, a nonprofit driving skill development through hands-on tech projects. Built the user interface for the Basic Banking System web application with a focus on responsive design and UI/UX best practices.",
+      techStack: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      responsibilities: [
+        "Built the user interface for the Basic Banking System web application",
+        "Created responsive, intuitive designs using HTML5, CSS3, and JavaScript",
+        "Implemented mobile-first layouts and interactive UI elements",
+        "Applied accessibility standards and animation patterns for better usability",
+        "Delivered a polished prototype for simulated banking operations",
+      ],
+      achievements: [
+        "Delivered an engaging banking system prototype with seamless cross-device experience",
+        "Applied UI/UX best practices including mobile-first design and accessibility",
+        "Gained early hands-on experience building real-world web interfaces",
+      ],
+      projects: ["Basic Banking System"],
     },
   ],
   educationSection: {
