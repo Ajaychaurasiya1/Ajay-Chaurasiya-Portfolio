@@ -200,7 +200,7 @@ export function Navbar() {
                           "flex items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors",
                           isActive
                             ? "bg-gradient-to-r from-cyan-500/15 to-violet-500/15 text-foreground"
-                            : "text-muted hover:bg-white/5 hover:text-foreground"
+                            : "text-muted hover:bg-foreground/5 hover:text-foreground"
                         )}
                       >
                         <span

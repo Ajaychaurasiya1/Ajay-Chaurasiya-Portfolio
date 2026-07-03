@@ -167,7 +167,7 @@ export function About() {
                       {area.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-md border border-card-border bg-white/5 px-2.5 py-1 text-xs text-muted"
+                          className="rounded-md border border-card-border bg-foreground/5 px-2.5 py-1 text-xs text-muted"
                         >
                           {tech}
                         </span>

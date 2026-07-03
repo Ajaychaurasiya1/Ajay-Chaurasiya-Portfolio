@@ -15,7 +15,7 @@ const variants = {
     "bg-gradient-to-r from-cyan-500 to-violet-500 text-white hover:from-cyan-400 hover:to-violet-400 shadow-lg shadow-cyan-500/20",
   secondary:
     "border border-card-border bg-card/50 text-foreground hover:border-cyan-500/50 hover:bg-card",
-  ghost: "text-muted hover:text-foreground hover:bg-white/5",
+  ghost: "text-muted hover:text-foreground hover:bg-foreground/5",
 };
 
 const sizes = {

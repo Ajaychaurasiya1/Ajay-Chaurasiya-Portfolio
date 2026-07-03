@@ -95,7 +95,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
+      className={`dark ${inter.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -103,7 +103,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
+      <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-cyan-500/30">
         {children}
       </body>
     </html>

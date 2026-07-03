@@ -59,7 +59,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute right-4 top-4 rounded-lg p-2 text-muted transition-colors hover:bg-white/10 hover:text-foreground"
+              className="absolute right-4 top-4 rounded-lg p-2 text-muted transition-colors hover:bg-foreground/10 hover:text-foreground"
               aria-label="Close modal"
             >
               <X className="h-5 w-5" />
@@ -70,7 +70,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <div className="mb-4 flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center gap-1.5 rounded-lg bg-white/5 px-3 py-1 text-xs font-medium text-muted">
+              <span className="inline-flex items-center gap-1.5 rounded-lg bg-foreground/5 px-3 py-1 text-xs font-medium text-muted">
                 {project.category === "work" ? (
                   <Briefcase className="h-3.5 w-3.5" />
                 ) : (
@@ -86,7 +86,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               >
                 {project.status}
               </span>
-              <span className="rounded-lg bg-white/5 px-3 py-1 text-xs font-medium text-accent">
+              <span className="rounded-lg bg-foreground/5 px-3 py-1 text-xs font-medium text-accent">
                 {project.type}
               </span>
             </div>
@@ -136,7 +136,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-lg border border-card-border bg-white/5 px-3 py-1.5 text-sm font-medium text-foreground"
+                    className="rounded-lg border border-card-border bg-foreground/5 px-3 py-1.5 text-sm font-medium text-foreground"
                   >
                     {tech}
                   </span>
@@ -169,7 +169,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {project.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex items-start gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-muted"
+                    className="flex items-start gap-2 rounded-lg bg-foreground/5 px-3 py-2 text-sm text-muted"
                   >
                     <span className="mt-0.5 font-bold text-accent">→</span>
                     {highlight}
@@ -182,7 +182,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-lg bg-white/5 px-3 py-1.5 text-sm font-medium text-muted"
+                  className="rounded-lg bg-foreground/5 px-3 py-1.5 text-sm font-medium text-muted"
                 >
                   {tag}
                 </span>

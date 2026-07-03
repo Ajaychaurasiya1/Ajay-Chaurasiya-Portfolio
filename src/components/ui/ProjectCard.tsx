@@ -50,7 +50,7 @@ export function ProjectCard({
         </div>
 
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center gap-1 rounded-lg bg-white/5 px-2.5 py-1 text-xs font-medium text-muted">
+          <span className="inline-flex items-center gap-1 rounded-lg bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted">
             <CategoryIcon className="h-3 w-3" />
             {project.category === "work" ? "Work" : "Side Project"}
           </span>
@@ -84,13 +84,13 @@ export function ProjectCard({
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-muted"
+                className="rounded-md bg-foreground/5 px-2 py-0.5 text-xs text-muted"
               >
                 {tech}
               </span>
             ))}
             {project.techStack.length > 4 && (
-              <span className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-muted">
+              <span className="rounded-md bg-foreground/5 px-2 py-0.5 text-xs text-muted">
                 +{project.techStack.length - 4}
               </span>
             )}
@@ -101,7 +101,7 @@ export function ProjectCard({
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-lg bg-white/5 px-3 py-1 text-xs font-medium text-muted"
+              className="rounded-lg bg-foreground/5 px-3 py-1 text-xs font-medium text-muted"
             >
               {tag}
             </span>

@@ -26,7 +26,7 @@ export function Experience() {
   const { experienceSection, experience } = portfolioData;
 
   return (
-    <AnimatedSection id="experience" className="bg-card/20">
+    <AnimatedSection id="experience" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Work Experience"
@@ -83,7 +83,7 @@ export function Experience() {
                           >
                             {exp.employmentType}
                           </span>
-                          <span className="rounded-lg bg-white/5 px-2.5 py-1 text-xs font-medium text-muted">
+                          <span className="rounded-lg bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted">
                             {exp.period}
                           </span>
                         </div>
@@ -119,7 +119,7 @@ export function Experience() {
                       {exp.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-lg border border-card-border bg-white/5 px-3 py-1 text-sm text-foreground"
+                          className="rounded-lg border border-card-border bg-foreground/5 px-3 py-1 text-sm text-foreground"
                         >
                           {tech}
                         </span>
@@ -157,7 +157,7 @@ export function Experience() {
                         {exp.achievements.map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-muted"
+                            className="flex items-start gap-2 rounded-lg bg-foreground/5 px-3 py-2 text-sm text-muted"
                           >
                             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                             {item}

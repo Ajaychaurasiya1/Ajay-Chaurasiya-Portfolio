@@ -26,7 +26,7 @@ export function Skills() {
   const { skillsSection, skillCategories } = portfolioData;
 
   return (
-    <AnimatedSection id="skills" className="bg-card/20">
+    <AnimatedSection id="skills" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Skills & Development"
@@ -244,7 +244,7 @@ export function Skills() {
                       {practice.tools.map((tool) => (
                         <span
                           key={tool}
-                          className="rounded-md border border-card-border bg-white/5 px-2.5 py-1 text-xs text-muted"
+                          className="rounded-md border border-card-border bg-foreground/5 px-2.5 py-1 text-xs text-muted"
                         >
                           {tool}
                         </span>

@@ -16,7 +16,7 @@ export function Education() {
   const { educationSection, education } = portfolioData;
 
   return (
-    <AnimatedSection id="education" className="bg-card/20">
+    <AnimatedSection id="education" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Education"
@@ -85,7 +85,7 @@ export function Education() {
                           <span className="rounded-lg border border-cyan-500/20 bg-cyan-500/10 px-2.5 py-1 text-xs font-medium text-cyan-400">
                             {edu.period}
                           </span>
-                          <span className="rounded-lg bg-white/5 px-2.5 py-1 text-xs font-medium text-muted">
+                          <span className="rounded-lg bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted">
                             {edu.duration}
                           </span>
                         </div>
@@ -122,7 +122,7 @@ export function Education() {
                       {edu.highlights.map((item) => (
                         <li
                           key={item}
-                          className="flex items-start gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-muted"
+                          className="flex items-start gap-2 rounded-lg bg-foreground/5 px-3 py-2 text-sm text-muted"
                         >
                           <GraduationCap className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                           {item}
