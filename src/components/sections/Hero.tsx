@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import {
   ArrowDown,
@@ -12,6 +13,13 @@ import {
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { Button } from "@/components/ui/Button";
+import { TiltCard } from "@/components/ui/TiltCard";
+
+const HeroScene3D = dynamic(
+  () =>
+    import("@/components/ui/HeroScene3D").then((mod) => mod.HeroScene3D),
+  { ssr: false }
+);
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 24 },
@@ -28,7 +36,9 @@ export function Hero() {
     <section
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20"
+      style={{ perspective: "1200px" }}
     >
+      <HeroScene3D />
       <div className="absolute inset-0 grid-pattern opacity-40" />
       <div className="absolute top-1/4 -left-20 h-[28rem] w-[28rem] rounded-full bg-red-600/10 blur-3xl" />
       <div className="absolute -right-20 bottom-1/4 h-[28rem] w-[28rem] rounded-full bg-red-600/5 blur-3xl" />
@@ -87,7 +97,7 @@ export function Hero() {
               const Icon = highlightIcons[index] ?? Sparkles;
 
               return (
-                <div
+                <TiltCard
                   key={highlight.title}
                   className="rounded-2xl border border-card-border bg-card/50 p-5 text-left backdrop-blur-sm sm:p-6"
                 >
@@ -100,7 +110,7 @@ export function Hero() {
                   <p className="text-sm leading-relaxed text-muted">
                     {highlight.description}
                   </p>
-                </div>
+                </TiltCard>
               );
             })}
           </motion.div>
