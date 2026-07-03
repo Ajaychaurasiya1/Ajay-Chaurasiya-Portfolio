@@ -13,9 +13,9 @@ interface ProjectCardProps {
 }
 
 const statusStyles = {
-  Live: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-  Completed: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-  "In Progress": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+  Live: "bg-red-500/10 text-red-400 border-red-500/20",
+  Completed: "bg-white/10 text-white border-white/20",
+  "In Progress": "bg-red-500/10 text-red-300 border-red-500/30",
 };
 
 export function ProjectCard({
@@ -35,15 +35,15 @@ export function ProjectCard({
       whileHover={{ y: -8 }}
       onClick={onClick}
       className={cn(
-        "group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-cyan-500/30 hover:bg-card",
+        "group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 hover:bg-card",
         className
       )}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-violet-500/5 opacity-0 transition-opacity group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-red-500/5 opacity-0 transition-opacity group-hover:opacity-100" />
 
       <div className="relative flex flex-1 flex-col">
         <div className="mb-4 flex items-start justify-between gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 text-lg font-bold text-accent">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 text-lg font-bold text-accent">
             {project.title.charAt(0)}
           </div>
           <ArrowUpRight className="h-5 w-5 shrink-0 text-muted transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent" />

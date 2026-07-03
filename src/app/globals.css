@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020203;
-  --foreground: #f4f4f5;
-  --muted: #9494a8;
-  --card: #08080f;
-  --card-border: #1a1a28;
-  --accent: #22d3ee;
-  --accent-secondary: #a78bfa;
-  --gradient-start: #22d3ee;
-  --gradient-end: #a78bfa;
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #d4d4d4;
+  --card: #0a0a0a;
+  --card-border: #262626;
+  --accent: #ef4444;
+  --accent-secondary: #ffffff;
+  --gradient-start: #ef4444;
+  --gradient-end: #ffffff;
 }
 
 @theme inline {
@@ -31,17 +31,13 @@ html {
 
 body {
   background-color: var(--background);
-  background-image:
-    radial-gradient(ellipse 80% 55% at 50% -15%, rgba(34, 211, 238, 0.07), transparent),
-    radial-gradient(ellipse 50% 45% at 100% 50%, rgba(167, 139, 250, 0.05), transparent),
-    radial-gradient(ellipse 40% 35% at 0% 85%, rgba(34, 211, 238, 0.04), transparent);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.28);
-  color: #fff;
+  background: rgba(239, 68, 68, 0.35);
+  color: #ffffff;
 }
 
 .gradient-text {
@@ -52,13 +48,13 @@ body {
 }
 
 .glow-accent {
-  box-shadow: 0 0 40px rgba(34, 211, 238, 0.14);
+  box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
 }
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -71,10 +67,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--card-border);
+  background: #3f3f3f;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2a3d;
+  background: #ef4444;
 }

@@ -17,9 +17,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
 const employmentStyles = {
-  "Full-time": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-  Internship: "bg-violet-500/10 text-violet-400 border-violet-500/20",
-  Contract: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  "Full-time": "bg-red-500/10 text-red-400 border-red-500/20",
+  Internship: "bg-white/10 text-white border-white/20",
+  Contract: "bg-red-500/10 text-red-300 border-red-500/30",
 };
 
 export function Experience() {
@@ -51,7 +51,7 @@ export function Experience() {
 
         {/* Timeline */}
         <div className="relative w-full">
-          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-cyan-500/50 via-violet-500/30 to-transparent sm:left-8 sm:block" />
+          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8 sm:block" />
 
           <div className="space-y-8">
             {experience.map((exp, index) => (
@@ -70,7 +70,7 @@ export function Experience() {
                   {/* Header */}
                   <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <Building2 className="h-7 w-7 text-accent" />
                       </div>
                       <div>
@@ -140,7 +140,7 @@ export function Experience() {
                             key={item}
                             className="flex items-start gap-2 text-sm text-muted"
                           >
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500" />
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-red-600 to-red-500" />
                             {item}
                           </li>
                         ))}
@@ -177,7 +177,7 @@ export function Experience() {
                       {exp.projects.map((project) => (
                         <span
                           key={project}
-                          className="rounded-lg bg-gradient-to-r from-cyan-500/10 to-violet-500/10 px-3 py-1.5 text-sm font-medium text-foreground"
+                          className="rounded-lg bg-gradient-to-r from-red-600/10 to-red-500/5 px-3 py-1.5 text-sm font-medium text-foreground"
                         >
                           {project}
                         </span>

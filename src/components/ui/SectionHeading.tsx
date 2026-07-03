@@ -39,7 +39,7 @@ export function SectionHeading({
       )}
       <div
         className={cn(
-          "mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500",
+          "mt-6 h-1 w-20 rounded-full bg-gradient-to-r from-red-600 to-white",
           align === "center" && "mx-auto"
         )}
       />

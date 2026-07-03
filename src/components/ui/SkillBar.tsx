@@ -19,7 +19,7 @@ export function SkillBar({ name, level, index, className }: SkillBarProps) {
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-card-border/50">
         <motion.div
-          className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-violet-500"
+          className="h-full rounded-full bg-gradient-to-r from-red-600 to-red-400"
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}

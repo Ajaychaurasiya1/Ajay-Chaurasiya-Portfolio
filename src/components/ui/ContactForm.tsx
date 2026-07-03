@@ -74,7 +74,7 @@ export function ContactForm() {
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
           disabled={status === "loading"}
-          className="w-full rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-cyan-500/50 disabled:opacity-60"
+          className="w-full rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-red-500/50 disabled:opacity-60"
           placeholder="Your name"
           required
         />
@@ -90,7 +90,7 @@ export function ContactForm() {
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           disabled={status === "loading"}
-          className="w-full rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-cyan-500/50 disabled:opacity-60"
+          className="w-full rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-red-500/50 disabled:opacity-60"
           placeholder="your@email.com"
           required
         />
@@ -106,14 +106,14 @@ export function ContactForm() {
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
           disabled={status === "loading"}
-          className="w-full resize-none rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-cyan-500/50 disabled:opacity-60"
+          className="w-full resize-none rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-colors placeholder:text-muted/50 focus:border-red-500/50 disabled:opacity-60"
           placeholder="Tell me about your project..."
           required
         />
       </div>
 
       {status === "success" && (
-        <p className="text-sm text-cyan-400">
+        <p className="text-sm text-white">
           Message sent successfully! I&apos;ll get back to you soon.
         </p>
       )}

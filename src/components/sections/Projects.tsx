@@ -83,8 +83,8 @@ export function Projects() {
               className={cn(
                 "rounded-xl px-4 py-2 text-sm font-medium transition-all",
                 activeFilter === filter.id
-                  ? "bg-gradient-to-r from-cyan-500 to-violet-500 text-white shadow-lg shadow-cyan-500/20"
-                  : "border border-card-border bg-card/50 text-muted hover:border-cyan-500/30 hover:text-foreground"
+                  ? "bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg shadow-red-600/25"
+                  : "border border-card-border bg-card/50 text-muted hover:border-red-500/40 hover:text-foreground"
               )}
             >
               {filter.label}

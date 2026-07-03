@@ -60,7 +60,7 @@ export function Education() {
 
         {/* Timeline */}
         <div className="relative w-full">
-          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-cyan-500/50 via-violet-500/30 to-transparent sm:left-8 sm:block" />
+          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8 sm:block" />
 
           <div className="space-y-8">
             {education.map((edu, index) => (
@@ -77,12 +77,12 @@ export function Education() {
                 <div className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
                   <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <GraduationCap className="h-7 w-7 text-accent" />
                       </div>
                       <div>
                         <div className="mb-2 flex flex-wrap items-center gap-2">
-                          <span className="rounded-lg border border-cyan-500/20 bg-cyan-500/10 px-2.5 py-1 text-xs font-medium text-cyan-400">
+                          <span className="rounded-lg border border-red-500/20 bg-red-500/10 px-2.5 py-1 text-xs font-medium text-red-400">
                             {edu.period}
                           </span>
                           <span className="rounded-lg bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted">

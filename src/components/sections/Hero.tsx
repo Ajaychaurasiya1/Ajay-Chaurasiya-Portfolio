@@ -30,8 +30,8 @@ export function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20"
     >
       <div className="absolute inset-0 grid-pattern opacity-40" />
-      <div className="absolute top-1/4 -left-20 h-[28rem] w-[28rem] rounded-full bg-cyan-500/10 blur-3xl" />
-      <div className="absolute -right-20 bottom-1/4 h-[28rem] w-[28rem] rounded-full bg-violet-500/10 blur-3xl" />
+      <div className="absolute top-1/4 -left-20 h-[28rem] w-[28rem] rounded-full bg-red-600/10 blur-3xl" />
+      <div className="absolute -right-20 bottom-1/4 h-[28rem] w-[28rem] rounded-full bg-red-600/5 blur-3xl" />
 
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center">
@@ -40,8 +40,8 @@ export function Hero() {
             {...fadeUp(0)}
             className="mb-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1 text-xs font-medium text-red-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
               {hero.availability}
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm text-muted">
@@ -91,7 +91,7 @@ export function Hero() {
                   key={highlight.title}
                   className="rounded-2xl border border-card-border bg-card/50 p-5 text-left backdrop-blur-sm sm:p-6"
                 >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
                   <h3 className="mb-2 text-base font-semibold text-foreground sm:text-lg">

@@ -64,10 +64,10 @@ export function Skills() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-                  className="group rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-cyan-500/30 sm:p-7"
+                  className="group rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 transition-transform group-hover:scale-105">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <div>
@@ -199,10 +199,10 @@ export function Skills() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-cyan-500/30 sm:p-7"
+                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 transition-transform group-hover:scale-105">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <div>

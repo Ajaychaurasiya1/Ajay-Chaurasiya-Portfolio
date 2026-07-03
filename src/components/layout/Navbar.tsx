@@ -71,7 +71,7 @@ export function Navbar() {
               href="#home"
               className="group flex items-center gap-2.5"
             >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/25 to-violet-500/25 text-xs font-bold text-accent transition-transform group-hover:scale-105 sm:h-10 sm:w-10 sm:rounded-xl sm:text-sm">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-red-600/20 to-red-500/10 text-xs font-bold text-accent transition-transform group-hover:scale-105 sm:h-10 sm:w-10 sm:rounded-xl sm:text-sm">
                 AC
               </div>
               <div className="hidden min-w-0 lg:block">
@@ -107,7 +107,7 @@ export function Navbar() {
                     {isActive && (
                       <motion.span
                         layoutId="nav-active"
-                        className="absolute inset-x-1 -bottom-1 h-0.5 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500"
+                        className="absolute inset-x-1 -bottom-1 h-0.5 rounded-full bg-gradient-to-r from-red-600 to-red-500"
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
                       />
                     )}
@@ -121,7 +121,7 @@ export function Navbar() {
           <div className="flex flex-1 items-center justify-end gap-3">
             <a
               href="#contact"
-              className="hidden items-center gap-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-2 text-sm font-medium text-white shadow-md shadow-cyan-500/20 transition-all hover:opacity-90 md:inline-flex"
+              className="hidden items-center gap-1.5 rounded-lg bg-gradient-to-r from-red-600 to-red-500 px-4 py-2 text-sm font-medium text-white shadow-md shadow-red-600/25 transition-all hover:opacity-90 md:inline-flex"
             >
               Hire Me
               <ArrowUpRight className="h-3.5 w-3.5" />
@@ -164,7 +164,7 @@ export function Navbar() {
                   onClick={closeMenu}
                   className="flex items-center gap-2"
                 >
-                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500/25 to-violet-500/25 text-xs font-bold text-accent">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-red-600/20 to-red-500/10 text-xs font-bold text-accent">
                     AC
                   </div>
                   <span className="text-sm font-bold text-foreground">
@@ -199,7 +199,7 @@ export function Navbar() {
                         className={cn(
                           "flex items-center gap-3 rounded-lg px-3 py-3 text-sm font-medium transition-colors",
                           isActive
-                            ? "bg-gradient-to-r from-cyan-500/15 to-violet-500/15 text-foreground"
+                            ? "bg-gradient-to-r from-red-600/15 to-red-500/10 text-foreground"
                             : "text-muted hover:bg-foreground/5 hover:text-foreground"
                         )}
                       >
@@ -207,7 +207,7 @@ export function Navbar() {
                           className={cn(
                             "h-1.5 w-1.5 shrink-0 rounded-full",
                             isActive
-                              ? "bg-gradient-to-r from-cyan-500 to-violet-500"
+                              ? "bg-gradient-to-r from-red-600 to-red-500"
                               : "bg-card-border"
                           )}
                         />
@@ -223,7 +223,7 @@ export function Navbar() {
                 <a
                   href="#contact"
                   onClick={closeMenu}
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 px-4 py-3 text-sm font-medium text-white"
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-red-600 to-red-500 px-4 py-3 text-sm font-medium text-white"
                 >
                   Hire Me
                   <ArrowUpRight className="h-4 w-4" />

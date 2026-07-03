@@ -101,7 +101,7 @@ export function Contact() {
               transition={{ duration: 0.5 }}
               className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-7"
             >
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-sm font-medium text-emerald-400">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1.5 text-sm font-medium text-red-400">
                 <Sparkles className="h-4 w-4 shrink-0" />
                 {contactSection.responseTime}
               </div>
@@ -109,7 +109,7 @@ export function Contact() {
               <div className="space-y-4">
                 {infoItems.map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                       <item.icon className="h-4 w-4 text-accent" />
                     </div>
                     <div className="min-w-0 pt-0.5">
@@ -152,9 +152,9 @@ export function Contact() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: i * 0.06 }}
-                      className="flex h-full min-h-[76px] items-center gap-3 rounded-xl border border-card-border bg-background/30 p-4 transition-colors hover:border-cyan-500/30 hover:bg-card"
+                      className="flex h-full min-h-[76px] items-center gap-3 rounded-xl border border-card-border bg-background/30 p-4 transition-colors hover:border-red-500/40 hover:bg-card"
                     >
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <Icon className="h-5 w-5 text-accent" />
                       </div>
                       <div className="min-w-0 flex-1">

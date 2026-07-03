@@ -12,9 +12,9 @@ interface ProjectModalProps {
 }
 
 const statusStyles = {
-  Live: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-  Completed: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-  "In Progress": "bg-violet-500/10 text-violet-400 border-violet-500/20",
+  Live: "bg-red-500/10 text-red-400 border-red-500/20",
+  Completed: "bg-white/10 text-white border-white/20",
+  "In Progress": "bg-red-500/10 text-red-300 border-red-500/30",
 };
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
@@ -65,7 +65,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               <X className="h-5 w-5" />
             </button>
 
-            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 text-2xl font-bold text-accent">
+            <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 text-2xl font-bold text-accent">
               {project.title.charAt(0)}
             </div>
 
@@ -154,7 +154,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     key={feature}
                     className="flex items-start gap-2 text-sm text-muted"
                   >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-cyan-500 to-violet-500" />
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-red-600 to-red-500" />
                     {feature}
                   </li>
                 ))}

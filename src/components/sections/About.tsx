@@ -42,7 +42,7 @@ export function About() {
         >
           <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 text-2xl font-bold text-accent">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-600/20 to-red-500/10 text-2xl font-bold text-accent">
                 AC
               </div>
               <div>
@@ -106,10 +106,10 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-cyan-500/30 sm:p-7"
+                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 transition-transform group-hover:scale-105">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <div>
@@ -151,7 +151,7 @@ export function About() {
                       {area.examples.map((example) => (
                         <span
                           key={example}
-                          className="rounded-lg bg-gradient-to-r from-cyan-500/10 to-violet-500/10 px-3 py-1 text-xs font-medium text-foreground"
+                          className="rounded-lg bg-gradient-to-r from-red-600/10 to-red-500/5 px-3 py-1 text-xs font-medium text-foreground"
                         >
                           {example}
                         </span>
@@ -218,10 +218,10 @@ export function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-cyan-500/30 sm:p-7"
+                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500/20 to-violet-500/20 transition-transform group-hover:scale-105">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
                     <div>
@@ -264,7 +264,7 @@ export function About() {
                       {item.appliedIn.map((project) => (
                         <span
                           key={project}
-                          className="rounded-lg bg-gradient-to-r from-cyan-500/10 to-violet-500/10 px-3 py-1 text-xs font-medium text-foreground"
+                          className="rounded-lg bg-gradient-to-r from-red-600/10 to-red-500/5 px-3 py-1 text-xs font-medium text-foreground"
                         >
                           {project}
                         </span>
