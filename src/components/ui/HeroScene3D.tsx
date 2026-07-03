@@ -1,41 +1,9 @@
 "use client";
 
-import { Float } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useEffect, useRef, useState } from "react";
-import type { Mesh } from "three";
+import { FloatingShape } from "@/components/ui/scene3d/FloatingShape";
+import { Scene3DCanvas } from "@/components/ui/scene3d/Scene3DCanvas";
 
-interface FloatingShapeProps {
-  position: [number, number, number];
-  scale?: number;
-  speed?: [number, number];
-  children: React.ReactNode;
-}
-
-function FloatingShape({
-  position,
-  scale = 1,
-  speed = [0.004, 0.006],
-  children,
-}: FloatingShapeProps) {
-  const meshRef = useRef<Mesh>(null);
-
-  useFrame(() => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x += speed[0];
-    meshRef.current.rotation.y += speed[1];
-  });
-
-  return (
-    <Float speed={1.5} rotationIntensity={0.35} floatIntensity={0.6}>
-      <mesh ref={meshRef} position={position} scale={scale}>
-        {children}
-      </mesh>
-    </Float>
-  );
-}
-
-function Scene() {
+function HeroScene() {
   return (
     <>
       <ambientLight intensity={0.4} />
@@ -79,29 +47,9 @@ function Scene() {
 }
 
 export function HeroScene3D() {
-  const [enabled, setEnabled] = useState(true);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    setEnabled(!prefersReducedMotion);
-  }, []);
-
-  if (!enabled) return null;
-
   return (
-    <div
-      className="pointer-events-none absolute inset-0 opacity-80"
-      aria-hidden="true"
-    >
-      <Canvas
-        camera={{ position: [0, 0, 8], fov: 42 }}
-        dpr={[1, 1.5]}
-        gl={{ alpha: true, antialias: true }}
-      >
-        <Scene />
-      </Canvas>
-    </div>
+    <Scene3DCanvas className="opacity-80">
+      <HeroScene />
+    </Scene3DCanvas>
   );
 }

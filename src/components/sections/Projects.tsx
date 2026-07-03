@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { portfolioData } from "@/data/portfolio";
@@ -8,7 +9,14 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ProjectModal } from "@/components/ui/ProjectModal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
+
+const ProjectsScene3D = dynamic(
+  () =>
+    import("@/components/ui/ProjectsScene3D").then((mod) => mod.ProjectsScene3D),
+  { ssr: false }
+);
 
 type FilterOption = "all" | ProjectCategory;
 
@@ -32,49 +40,56 @@ export function Projects() {
   );
 
   return (
-    <AnimatedSection id="projects">
-      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
+    <AnimatedSection id="projects" className="overflow-hidden">
+      <ProjectsScene3D />
+      <div
+        className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-16"
+        style={{ perspective: "1200px" }}
+      >
         <SectionHeading
           title="Featured Projects"
           subtitle="Professional work and personal builds across the full stack"
         />
 
-        {/* Intro */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-10 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+          className="mb-10"
         >
-          <p className="mb-3 text-lg font-medium text-foreground">
-            {projectsSection.tagline}
-          </p>
-          <p className="leading-relaxed text-muted">
-            {projectsSection.description}
-          </p>
+          <TiltCard
+            maxTilt={6}
+            className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+          >
+            <p className="mb-3 text-lg font-medium text-foreground">
+              {projectsSection.tagline}
+            </p>
+            <p className="leading-relaxed text-muted">
+              {projectsSection.description}
+            </p>
+          </TiltCard>
         </motion.div>
 
-        {/* Stats */}
         <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {projectsSection.stats.map((stat, i) => (
-            <motion.div
+            <TiltCard
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
+              maxTilt={8}
               className="rounded-2xl border border-card-border bg-card/30 p-4 text-center backdrop-blur-sm sm:p-5"
             >
               <p className="text-xl font-bold gradient-text sm:text-2xl">
                 {stat.value}
               </p>
               <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
-            </motion.div>
+            </TiltCard>
           ))}
         </div>
 
-        {/* Filters */}
         <div className="mb-8 flex flex-wrap justify-center gap-2">
           {filters.map((filter) => (
             <button
@@ -92,11 +107,7 @@ export function Projects() {
           ))}
         </div>
 
-        {/* Project grid */}
-        <motion.div
-          layout
-          className="grid gap-6 sm:grid-cols-2"
-        >
+        <motion.div layout className="grid gap-6 sm:grid-cols-2">
           {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}

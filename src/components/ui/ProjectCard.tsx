@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight, Briefcase, User } from "lucide-react";
 import type { Project } from "@/types/portfolio";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -27,12 +27,12 @@ export function ProjectCard({
   const CategoryIcon = project.category === "work" ? Briefcase : User;
 
   return (
-    <motion.article
+    <TiltCard
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      whileHover={{ y: -8 }}
+      maxTilt={12}
       onClick={onClick}
       className={cn(
         "group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 hover:bg-card",
@@ -108,6 +108,6 @@ export function ProjectCard({
           ))}
         </div>
       </div>
-    </motion.article>
+    </TiltCard>
   );
 }
