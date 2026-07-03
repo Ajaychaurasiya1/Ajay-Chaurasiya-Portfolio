@@ -2,11 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
-  Clock,
   Handshake,
-  MapPin,
-  MessageCircle,
-  Sparkles,
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
@@ -25,24 +21,6 @@ const iconMap = {
   instagram: InstagramIcon,
   email: MailIcon,
 };
-
-const infoItems = [
-  {
-    icon: Clock,
-    label: "Response",
-    value: portfolioData.contactSection.responseTime,
-  },
-  {
-    icon: MapPin,
-    label: "Location",
-    value: portfolioData.contactSection.location,
-  },
-  {
-    icon: MessageCircle,
-    label: "Email",
-    value: portfolioData.email,
-  },
-];
 
 export function Contact() {
   const { contactSection, socialLinks } = portfolioData;
@@ -92,39 +70,8 @@ export function Contact() {
 
         {/* Main contact grid */}
         <div className="mb-12 grid items-stretch gap-8 lg:grid-cols-2">
-          {/* Left: contact info + social */}
+          {/* Left: social */}
           <div className="flex flex-col gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-7"
-            >
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1.5 text-sm font-medium text-red-400">
-                <Sparkles className="h-4 w-4 shrink-0" />
-                {contactSection.responseTime}
-              </div>
-
-              <div className="space-y-4">
-                {infoItems.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
-                      <item.icon className="h-4 w-4 text-accent" />
-                    </div>
-                    <div className="min-w-0 pt-0.5">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-muted">
-                        {item.label}
-                      </p>
-                      <p className="mt-0.5 break-all text-sm text-foreground sm:break-normal">
-                        {item.value}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
