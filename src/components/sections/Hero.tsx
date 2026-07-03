@@ -42,18 +42,11 @@ export function Hero() {
             </motion.div>
 
             {/* Headline */}
-            <motion.p
-              {...fadeUp(0.05)}
-              className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted"
-            >
-              {hero.greeting}
-            </motion.p>
-
             <motion.h1
               {...fadeUp(0.1)}
-              className="mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+              className="gradient-text mb-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
             >
-              <span className="gradient-text">{name}</span>
+              {hero.greeting} {name}
             </motion.h1>
 
             <motion.p
