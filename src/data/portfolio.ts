@@ -22,6 +22,23 @@ export const portfolioData: PortfolioData = {
       "From marketplaces and AI evaluation systems to analytics dashboards and corporate websites.",
     location: "India · Open to Remote",
     availability: "Open to Opportunities",
+    highlights: [
+      {
+        title: "AI Platforms & SaaS",
+        description:
+          "Human-in-the-loop evaluation systems, multi-role marketplaces, and scalable product workflows.",
+      },
+      {
+        title: "Full Stack MERN",
+        description:
+          "React and Next.js frontends, Node.js APIs, MongoDB data layers, and end-to-end feature delivery.",
+      },
+      {
+        title: "Dashboards & Analytics",
+        description:
+          "Interactive charts, reporting flows, and performance insights for data-heavy applications.",
+      },
+    ],
     stats: [
       { value: "10 Mo", label: "Experience" },
       { value: "8+", label: "Projects" },

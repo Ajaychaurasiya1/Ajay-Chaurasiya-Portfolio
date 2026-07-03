@@ -178,12 +178,18 @@ export interface AboutData {
   stats: AboutStat[];
 }
 
+export interface HeroHighlight {
+  title: string;
+  description: string;
+}
+
 export interface HeroSectionData {
   greeting: string;
   badge: string;
   tagline: string;
   location: string;
   availability: string;
+  highlights: HeroHighlight[];
   stats: AboutStat[];
   techPills: string[];
   ctaPrimary: { label: string; href: string };
