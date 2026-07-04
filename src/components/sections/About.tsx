@@ -26,7 +26,7 @@ export function About() {
   const { about } = portfolioData;
 
   return (
-    <AnimatedSection id="about" scene="about">
+    <AnimatedSection id="about">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="About Me"

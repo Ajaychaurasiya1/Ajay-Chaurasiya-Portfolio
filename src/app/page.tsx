@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main>
+      <main style={{ perspective: "1200px" }}>
         <Hero />
         <About />
         <Skills />

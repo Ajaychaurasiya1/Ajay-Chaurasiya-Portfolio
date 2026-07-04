@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { PageBackground } from "@/components/layout/PageBackground";
 import "./globals.css";
 
 const inter = Inter({
@@ -104,7 +105,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-red-500/35">
-        {children}
+        <PageBackground />
+        <div className="relative z-0">{children}</div>
       </body>
     </html>
   );

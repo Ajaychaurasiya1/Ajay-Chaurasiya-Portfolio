@@ -11,6 +11,7 @@ interface Scene3DCanvasProps {
     position: [number, number, number];
     fov: number;
   };
+  fixed?: boolean;
   viewportOnly?: boolean;
 }
 
@@ -18,6 +19,7 @@ export function Scene3DCanvas({
   children,
   className,
   camera = { position: [0, 0, 8], fov: 42 },
+  fixed = false,
   viewportOnly = false,
 }: Scene3DCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,7 +52,11 @@ export function Scene3DCanvas({
   return (
     <div
       ref={containerRef}
-      className={cn("pointer-events-none absolute inset-0", className)}
+      className={cn(
+        "pointer-events-none inset-0",
+        fixed ? "fixed -z-10" : "absolute",
+        className
+      )}
       aria-hidden="true"
     >
       {showCanvas && (

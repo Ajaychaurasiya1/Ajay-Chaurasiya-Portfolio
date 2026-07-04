@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 import { portfolioData } from "@/data/portfolio";
@@ -11,12 +10,6 @@ import { ProjectModal } from "@/components/ui/ProjectModal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TiltCard } from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
-
-const ProjectsScene3D = dynamic(
-  () =>
-    import("@/components/ui/ProjectsScene3D").then((mod) => mod.ProjectsScene3D),
-  { ssr: false }
-);
 
 type FilterOption = "all" | ProjectCategory;
 
@@ -40,12 +33,8 @@ export function Projects() {
   );
 
   return (
-    <AnimatedSection id="projects" className="overflow-hidden">
-      <ProjectsScene3D />
-      <div
-        className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-16"
-        style={{ perspective: "1200px" }}
-      >
+    <AnimatedSection id="projects">
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Featured Projects"
           subtitle="Professional work and personal builds across the full stack"

@@ -17,7 +17,7 @@ export function Education() {
   const { educationSection, education } = portfolioData;
 
   return (
-    <AnimatedSection id="education" scene="education" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="education" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Education"

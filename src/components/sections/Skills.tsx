@@ -27,7 +27,7 @@ export function Skills() {
   const { skillsSection, skillCategories } = portfolioData;
 
   return (
-    <AnimatedSection id="skills" scene="skills" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="skills" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Skills & Development"

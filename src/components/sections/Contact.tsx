@@ -27,7 +27,7 @@ export function Contact() {
   const { contactSection, socialLinks } = portfolioData;
 
   return (
-    <AnimatedSection id="contact" scene="contact">
+    <AnimatedSection id="contact">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Get In Touch"

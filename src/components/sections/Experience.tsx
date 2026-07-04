@@ -27,7 +27,7 @@ export function Experience() {
   const { experienceSection, experience } = portfolioData;
 
   return (
-    <AnimatedSection id="experience" scene="experience" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="experience" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Work Experience"
