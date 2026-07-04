@@ -86,7 +86,7 @@ export function Contact() {
               <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest text-accent">
                 Connect With Me
               </h3>
-              <div className="grid flex-1 gap-3 sm:grid-cols-2">
+              <div className="flex flex-1 flex-col gap-3">
                 {socialLinks.map((link, i) => {
                   const Icon = iconMap[link.icon];
                   return (
