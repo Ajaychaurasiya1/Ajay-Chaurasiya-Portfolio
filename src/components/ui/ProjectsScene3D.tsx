@@ -91,7 +91,7 @@ function ProjectsScene() {
 
 export function ProjectsScene3D() {
   return (
-    <Scene3DCanvas className="opacity-60">
+    <Scene3DCanvas className="opacity-60" viewportOnly>
       <ProjectsScene />
     </Scene3DCanvas>
   );

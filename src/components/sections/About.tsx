@@ -17,6 +17,7 @@ import {
 import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 const highlightIcons = [Layers, Rocket, Shield];
 const focusIcons = [Store, Brain, BarChart3, Globe];
@@ -25,7 +26,7 @@ export function About() {
   const { about } = portfolioData;
 
   return (
-    <AnimatedSection id="about">
+    <AnimatedSection id="about" scene="about">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="About Me"
@@ -33,11 +34,12 @@ export function About() {
         />
 
         {/* Intro block */}
-        <motion.div
+        <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          maxTilt={6}
           className="mb-12 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
           <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -65,7 +67,7 @@ export function About() {
               </p>
             ))}
           </div>
-        </motion.div>
+        </TiltCard>
 
         {/* What I build */}
         <motion.div
@@ -80,7 +82,10 @@ export function About() {
           </h3>
 
           {/* What I build intro */}
-          <div className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
+          <TiltCard
+            maxTilt={6}
+            className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+          >
             <div className="mb-4 flex items-center gap-2 text-accent">
               <Hammer className="h-5 w-5" />
               <span className="text-sm font-semibold uppercase tracking-widest">
@@ -93,19 +98,20 @@ export function About() {
             <p className="leading-relaxed text-muted">
               {about.whatIBuild.description}
             </p>
-          </div>
+          </TiltCard>
 
           {/* Focus area cards */}
           <div className="grid gap-6 lg:grid-cols-2">
             {about.focusAreas.map((area, i) => {
               const Icon = focusIcons[i] ?? Globe;
               return (
-                <motion.article
+                <TiltCard
                   key={area.id}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
+                  maxTilt={8}
                   className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
@@ -174,7 +180,7 @@ export function About() {
                       ))}
                     </div>
                   </div>
-                </motion.article>
+                </TiltCard>
               );
             })}
           </div>
@@ -192,7 +198,10 @@ export function About() {
           </h3>
 
           {/* Core strengths intro */}
-          <div className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
+          <TiltCard
+            maxTilt={6}
+            className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+          >
             <div className="mb-4 flex items-center gap-2 text-accent">
               <Sparkles className="h-5 w-5" />
               <span className="text-sm font-semibold uppercase tracking-widest">
@@ -205,19 +214,20 @@ export function About() {
             <p className="leading-relaxed text-muted">
               {about.coreStrengths.description}
             </p>
-          </div>
+          </TiltCard>
 
           {/* Strength cards */}
           <div className="grid gap-6 lg:grid-cols-3">
             {about.highlights.map((item, i) => {
               const Icon = highlightIcons[i] ?? Layers;
               return (
-                <motion.article
+                <TiltCard
                   key={item.id}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
+                  maxTilt={8}
                   className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
@@ -271,7 +281,7 @@ export function About() {
                       ))}
                     </div>
                   </div>
-                </motion.article>
+                </TiltCard>
               );
             })}
           </div>

@@ -8,6 +8,7 @@ import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TiltCard } from "@/components/ui/TiltCard";
 import {
   GithubIcon,
   InstagramIcon,
@@ -26,7 +27,7 @@ export function Contact() {
   const { contactSection, socialLinks } = portfolioData;
 
   return (
-    <AnimatedSection id="contact">
+    <AnimatedSection id="contact" scene="contact">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Get In Touch"
@@ -34,11 +35,12 @@ export function Contact() {
         />
 
         {/* Intro */}
-        <motion.div
+        <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          maxTilt={6}
           className="mb-10 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
           <p className="mb-3 text-lg font-medium text-foreground">
@@ -47,24 +49,25 @@ export function Contact() {
           <p className="leading-relaxed text-muted">
             {contactSection.description}
           </p>
-        </motion.div>
+        </TiltCard>
 
         {/* Stats */}
         <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {contactSection.stats.map((stat, i) => (
-            <motion.div
+            <TiltCard
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
+              maxTilt={8}
               className="flex min-h-[88px] flex-col items-center justify-center rounded-2xl border border-card-border bg-card/30 p-4 text-center backdrop-blur-sm sm:min-h-[96px] sm:p-5"
             >
               <p className="text-xl font-bold gradient-text sm:text-2xl">
                 {stat.value}
               </p>
               <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
-            </motion.div>
+            </TiltCard>
           ))}
         </div>
 
@@ -72,11 +75,12 @@ export function Contact() {
         <div className="mb-12 grid items-stretch gap-8 lg:grid-cols-2">
           {/* Left: social */}
           <div className="flex flex-col gap-6">
-            <motion.div
+            <TiltCard
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
+              maxTilt={8}
               className="flex flex-1 flex-col rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-7"
             >
               <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest text-accent">
@@ -114,15 +118,16 @@ export function Contact() {
                   );
                 })}
               </div>
-            </motion.div>
+            </TiltCard>
           </div>
 
           {/* Right: contact form */}
-          <motion.div
+          <TiltCard
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.05 }}
+            maxTilt={8}
             className="h-full"
           >
             <div className="flex h-full flex-col rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-7">
@@ -137,7 +142,7 @@ export function Contact() {
               </div>
               <ContactForm />
             </div>
-          </motion.div>
+          </TiltCard>
         </div>
 
         {/* Open to: full width, uniform cards */}
@@ -153,12 +158,13 @@ export function Contact() {
           </h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {contactSection.reasons.map((reason, i) => (
-              <motion.div
+              <TiltCard
                 key={reason.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
+                maxTilt={7}
                 className="flex h-full min-h-[140px] flex-col rounded-2xl border border-card-border bg-card/50 p-5 backdrop-blur-sm"
               >
                 <h4 className="mb-2 font-semibold text-foreground">
@@ -167,7 +173,7 @@ export function Contact() {
                 <p className="flex-1 text-sm leading-relaxed text-muted">
                   {reason.description}
                 </p>
-              </motion.div>
+              </TiltCard>
             ))}
           </div>
         </motion.div>

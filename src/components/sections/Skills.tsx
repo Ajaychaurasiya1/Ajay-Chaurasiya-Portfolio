@@ -18,6 +18,7 @@ import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SkillBar } from "@/components/ui/SkillBar";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 const categoryIcons = [Layers, Server, Database, Wrench];
 const practiceIcons = [Code2, Server, Database, GitBranch, Search, Rocket];
@@ -26,7 +27,7 @@ export function Skills() {
   const { skillsSection, skillCategories } = portfolioData;
 
   return (
-    <AnimatedSection id="skills" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="skills" scene="skills" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Skills & Development"
@@ -34,11 +35,12 @@ export function Skills() {
         />
 
         {/* Intro */}
-        <motion.div
+        <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          maxTilt={6}
           className="mb-10 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
           <p className="mb-3 text-lg font-medium text-foreground">
@@ -47,7 +49,7 @@ export function Skills() {
           <p className="leading-relaxed text-muted">
             {skillsSection.description}
           </p>
-        </motion.div>
+        </TiltCard>
 
         {/* Skill categories */}
         <div className="mb-14">
@@ -58,12 +60,13 @@ export function Skills() {
             {skillCategories.map((category, catIndex) => {
               const Icon = categoryIcons[catIndex] ?? Layers;
               return (
-                <motion.article
+                <TiltCard
                   key={category.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: catIndex * 0.1 }}
+                  maxTilt={8}
                   className="group rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
@@ -107,7 +110,7 @@ export function Skills() {
                       ))}
                     </ul>
                   </div>
-                </motion.article>
+                </TiltCard>
               );
             })}
           </div>
@@ -125,14 +128,17 @@ export function Skills() {
           </h3>
 
           {/* Intro */}
-          <div className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
+          <TiltCard
+            maxTilt={6}
+            className="mb-8 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+          >
             <p className="mb-3 text-lg font-medium text-foreground">
               {skillsSection.development.tagline}
             </p>
             <p className="leading-relaxed text-muted">
               {skillsSection.development.description}
             </p>
-          </div>
+          </TiltCard>
 
           {/* Workflow pipeline */}
           <div className="mb-12">
@@ -141,12 +147,13 @@ export function Skills() {
             </h4>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {skillsSection.development.workflow.map((item, i) => (
-                <motion.div
+                <TiltCard
                   key={item.step}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
+                  maxTilt={7}
                   className="relative rounded-2xl border border-card-border bg-card/50 p-5 text-center backdrop-blur-sm"
                 >
                   <p className="mb-2 text-2xl font-bold gradient-text">
@@ -161,7 +168,7 @@ export function Skills() {
                   {i < skillsSection.development.workflow.length - 1 && (
                     <ArrowRight className="absolute top-1/2 -right-3 hidden h-5 w-5 -translate-y-1/2 text-accent lg:block" />
                   )}
-                </motion.div>
+                </TiltCard>
               ))}
             </div>
           </div>
@@ -174,12 +181,13 @@ export function Skills() {
             {skillsSection.development.practices.map((practice, i) => {
               const Icon = practiceIcons[i] ?? Code2;
               return (
-                <motion.article
+                <TiltCard
                   key={practice.id}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
+                  maxTilt={8}
                   className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
@@ -232,7 +240,7 @@ export function Skills() {
                       ))}
                     </div>
                   </div>
-                </motion.article>
+                </TiltCard>
               );
             })}
           </div>

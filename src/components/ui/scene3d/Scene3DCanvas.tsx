@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface Scene3DCanvasProps {
@@ -11,14 +11,18 @@ interface Scene3DCanvasProps {
     position: [number, number, number];
     fov: number;
   };
+  viewportOnly?: boolean;
 }
 
 export function Scene3DCanvas({
   children,
   className,
   camera = { position: [0, 0, 8], fov: 42 },
+  viewportOnly = false,
 }: Scene3DCanvasProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [enabled, setEnabled] = useState(true);
+  const [inView, setInView] = useState(!viewportOnly);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
@@ -27,23 +31,37 @@ export function Scene3DCanvas({
     setEnabled(!prefersReducedMotion);
   }, []);
 
+  useEffect(() => {
+    if (!viewportOnly || !containerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "120px" }
+    );
+
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [viewportOnly]);
+
   if (!enabled) return null;
+
+  const showCanvas = !viewportOnly || inView;
 
   return (
     <div
-      className={cn(
-        "pointer-events-none absolute inset-0",
-        className
-      )}
+      ref={containerRef}
+      className={cn("pointer-events-none absolute inset-0", className)}
       aria-hidden="true"
     >
-      <Canvas
-        camera={camera}
-        dpr={[1, 1.5]}
-        gl={{ alpha: true, antialias: true }}
-      >
-        {children}
-      </Canvas>
+      {showCanvas && (
+        <Canvas
+          camera={camera}
+          dpr={[1, 1.25]}
+          gl={{ alpha: true, antialias: true }}
+        >
+          {children}
+        </Canvas>
+      )}
     </div>
   );
 }

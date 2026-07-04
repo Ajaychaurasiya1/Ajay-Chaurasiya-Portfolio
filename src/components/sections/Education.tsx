@@ -11,12 +11,13 @@ import {
 import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TiltCard } from "@/components/ui/TiltCard";
 
 export function Education() {
   const { educationSection, education } = portfolioData;
 
   return (
-    <AnimatedSection id="education" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="education" scene="education" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Education"
@@ -24,11 +25,12 @@ export function Education() {
         />
 
         {/* Intro */}
-        <motion.div
+        <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          maxTilt={6}
           className="mb-10 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
           <p className="mb-3 text-lg font-medium text-foreground">
@@ -37,24 +39,25 @@ export function Education() {
           <p className="leading-relaxed text-muted">
             {educationSection.description}
           </p>
-        </motion.div>
+        </TiltCard>
 
         {/* Stats */}
         <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {educationSection.stats.map((stat, i) => (
-            <motion.div
+            <TiltCard
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
+              maxTilt={8}
               className="rounded-2xl border border-card-border bg-card/30 p-4 text-center backdrop-blur-sm sm:p-5"
             >
               <p className="text-xl font-bold gradient-text sm:text-2xl">
                 {stat.value}
               </p>
               <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
-            </motion.div>
+            </TiltCard>
           ))}
         </div>
 
@@ -74,7 +77,10 @@ export function Education() {
               >
                 <div className="absolute top-8 left-0 hidden h-4 w-4 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:block" />
 
-                <div className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
+                <TiltCard
+                  maxTilt={8}
+                  className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+                >
                   <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex items-start gap-4">
                       <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
@@ -130,7 +136,7 @@ export function Education() {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </TiltCard>
               </motion.article>
             ))}
           </div>

@@ -14,6 +14,7 @@ import {
 import { portfolioData } from "@/data/portfolio";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { TiltCard } from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
 
 const employmentStyles = {
@@ -26,7 +27,7 @@ export function Experience() {
   const { experienceSection, experience } = portfolioData;
 
   return (
-    <AnimatedSection id="experience" className="border-y border-card-border/40 bg-card/35">
+    <AnimatedSection id="experience" scene="experience" className="border-y border-card-border/40 bg-card/35">
       <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-16">
         <SectionHeading
           title="Work Experience"
@@ -34,11 +35,12 @@ export function Experience() {
         />
 
         {/* Intro */}
-        <motion.div
+        <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          maxTilt={6}
           className="mb-10 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
           <p className="mb-3 text-lg font-medium text-foreground">
@@ -47,7 +49,7 @@ export function Experience() {
           <p className="leading-relaxed text-muted">
             {experienceSection.description}
           </p>
-        </motion.div>
+        </TiltCard>
 
         {/* Timeline */}
         <div className="relative w-full">
@@ -66,7 +68,10 @@ export function Experience() {
                 {/* Timeline dot */}
                 <div className="absolute top-8 left-0 hidden h-4 w-4 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:block" />
 
-                <div className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8">
+                <TiltCard
+                  maxTilt={8}
+                  className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+                >
                   {/* Header */}
                   <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex items-start gap-4">
@@ -184,7 +189,7 @@ export function Experience() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </TiltCard>
               </motion.article>
             ))}
           </div>

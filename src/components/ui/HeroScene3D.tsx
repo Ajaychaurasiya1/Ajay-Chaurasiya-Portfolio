@@ -48,7 +48,7 @@ function HeroScene() {
 
 export function HeroScene3D() {
   return (
-    <Scene3DCanvas className="opacity-80">
+    <Scene3DCanvas className="opacity-80" viewportOnly>
       <HeroScene />
     </Scene3DCanvas>
   );
