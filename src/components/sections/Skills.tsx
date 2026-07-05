@@ -56,7 +56,7 @@ export function Skills() {
           <h3 className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-accent">
             Technical Skills
           </h3>
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4 lg:gap-6">
             {skillCategories.map((category, catIndex) => {
               const Icon = categoryIcons[catIndex] ?? Layers;
               return (
@@ -145,7 +145,7 @@ export function Skills() {
             <h4 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted">
               My Workflow
             </h4>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-2 lg:grid-cols-5 lg:gap-4">
               {skillsSection.development.workflow.map((item, i) => (
                 <TiltCard
                   key={item.step}
@@ -154,7 +154,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   maxTilt={7}
-                  className="relative rounded-2xl border border-card-border bg-card/50 p-5 text-center backdrop-blur-sm"
+                  className="relative rounded-2xl border border-card-border bg-card/50 p-3 text-center backdrop-blur-sm lg:p-5"
                 >
                   <p className="mb-2 text-2xl font-bold gradient-text">
                     {item.step}
@@ -177,7 +177,7 @@ export function Skills() {
           <h4 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted">
             Core Practices
           </h4>
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4 lg:gap-6">
             {skillsSection.development.practices.map((practice, i) => {
               const Icon = practiceIcons[i] ?? Code2;
               return (

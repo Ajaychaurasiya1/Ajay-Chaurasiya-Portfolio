@@ -60,7 +60,7 @@ export function Projects() {
           </TiltCard>
         </motion.div>
 
-        <div className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="mb-10 grid grid-cols-4 gap-2 sm:gap-4">
           {projectsSection.stats.map((stat, i) => (
             <TiltCard
               key={stat.label}
@@ -96,7 +96,7 @@ export function Projects() {
           ))}
         </div>
 
-        <motion.div layout className="grid gap-6 sm:grid-cols-2">
+        <motion.div layout className="grid grid-cols-2 gap-4 lg:gap-6">
           {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}

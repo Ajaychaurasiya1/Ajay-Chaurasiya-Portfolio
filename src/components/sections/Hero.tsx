@@ -82,7 +82,7 @@ export function Hero() {
           {/* Highlight cards */}
           <motion.div
             {...fadeUp(0.25)}
-            className="mb-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="mb-10 grid w-full grid-cols-2 gap-4 lg:grid-cols-4"
           >
             {hero.highlights.map((highlight, index) => {
               const Icon = highlightIcons[index] ?? Sparkles;
@@ -132,7 +132,7 @@ export function Hero() {
           {/* CTAs */}
           <motion.div
             {...fadeUp(0.4)}
-            className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            className="mb-12 flex flex-row flex-wrap items-center justify-center gap-4"
           >
             <Button href={hero.ctaPrimary.href} size="lg">
               <Code2 className="h-5 w-5" />
@@ -146,7 +146,7 @@ export function Hero() {
           {/* Stats */}
           <motion.div
             {...fadeUp(0.45)}
-            className="grid w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-card-border bg-card-border sm:grid-cols-4"
+            className="grid w-full grid-cols-4 gap-px overflow-hidden rounded-2xl border border-card-border bg-card-border"
           >
             {hero.stats.map((stat) => (
               <div

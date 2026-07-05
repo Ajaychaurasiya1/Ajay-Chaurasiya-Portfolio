@@ -34,7 +34,6 @@ export function Experience() {
           subtitle="Professional growth across MERN stack and AI product development"
         />
 
-        {/* Intro */}
         <TiltCard
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,9 +50,8 @@ export function Experience() {
           </p>
         </TiltCard>
 
-        {/* Timeline */}
         <div className="relative w-full">
-          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8 sm:block" />
+          <div className="absolute top-0 bottom-0 left-4 w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8" />
 
           <div className="space-y-8">
             {experience.map((exp, index) => (
@@ -63,20 +61,18 @@ export function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-0 sm:pl-20"
+                className="relative pl-12 sm:pl-20"
               >
-                {/* Timeline dot */}
-                <div className="absolute top-8 left-0 hidden h-4 w-4 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:block" />
+                <div className="absolute top-8 left-2.5 h-3 w-3 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:h-4 sm:w-4" />
 
                 <TiltCard
                   maxTilt={8}
-                  className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+                  className="rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm sm:p-8"
                 >
-                  {/* Header */}
-                  <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
-                        <Building2 className="h-7 w-7 text-accent" />
+                  <div className="mb-6 flex flex-row flex-wrap items-start justify-between gap-4">
+                    <div className="flex min-w-[12rem] flex-1 items-start gap-3 sm:gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 sm:h-14 sm:w-14">
+                        <Building2 className="h-6 w-6 text-accent sm:h-7 sm:w-7" />
                       </div>
                       <div>
                         <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -92,14 +88,14 @@ export function Experience() {
                             {exp.period}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground sm:text-2xl">
+                        <h3 className="text-lg font-bold text-foreground sm:text-2xl">
                           {exp.role}
                         </h3>
-                        <p className="text-lg text-accent">{exp.company}</p>
+                        <p className="text-base text-accent sm:text-lg">{exp.company}</p>
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 text-sm text-muted lg:items-end">
+                    <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 shrink-0 text-accent" />
                         <span>{exp.duration}</span>
@@ -111,10 +107,10 @@ export function Experience() {
                     </div>
                   </div>
 
-                  {/* Summary */}
-                  <p className="mb-6 leading-relaxed text-muted">{exp.summary}</p>
+                  <p className="mb-6 text-sm leading-relaxed text-muted sm:text-base">
+                    {exp.summary}
+                  </p>
 
-                  {/* Tech stack */}
                   <div className="mb-6">
                     <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent">
                       <Code2 className="h-4 w-4" />
@@ -124,7 +120,7 @@ export function Experience() {
                       {exp.techStack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-lg border border-card-border bg-foreground/5 px-3 py-1 text-sm text-foreground"
+                          className="rounded-lg border border-card-border bg-foreground/5 px-2.5 py-1 text-xs text-foreground sm:px-3 sm:text-sm"
                         >
                           {tech}
                         </span>
@@ -132,10 +128,9 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <div className="mb-6 grid gap-6 lg:grid-cols-2">
-                    {/* Responsibilities */}
+                  <div className="mb-6 grid grid-cols-2 gap-4 lg:gap-6">
                     <div>
-                      <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-muted">
+                      <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
                         <Briefcase className="h-4 w-4 text-accent" />
                         Responsibilities
                       </div>
@@ -143,7 +138,7 @@ export function Experience() {
                         {exp.responsibilities.map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-2 text-sm text-muted"
+                            className="flex items-start gap-2 text-xs text-muted sm:text-sm"
                           >
                             <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-red-600 to-red-500" />
                             {item}
@@ -152,9 +147,8 @@ export function Experience() {
                       </ul>
                     </div>
 
-                    {/* Achievements */}
                     <div>
-                      <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-muted">
+                      <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
                         <Award className="h-4 w-4 text-accent" />
                         Key Achievements
                       </div>
@@ -162,7 +156,7 @@ export function Experience() {
                         {exp.achievements.map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-2 rounded-lg bg-foreground/5 px-3 py-2 text-sm text-muted"
+                            className="flex items-start gap-2 rounded-lg bg-foreground/5 px-2 py-1.5 text-xs text-muted sm:px-3 sm:py-2 sm:text-sm"
                           >
                             <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                             {item}
@@ -172,9 +166,8 @@ export function Experience() {
                     </div>
                   </div>
 
-                  {/* Projects worked on */}
                   <div>
-                    <div className="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-muted">
+                    <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
                       <FolderKanban className="h-4 w-4 text-accent" />
                       Projects & Products
                     </div>
@@ -182,7 +175,7 @@ export function Experience() {
                       {exp.projects.map((project) => (
                         <span
                           key={project}
-                          className="rounded-lg bg-gradient-to-r from-red-600/10 to-red-500/5 px-3 py-1.5 text-sm font-medium text-foreground"
+                          className="rounded-lg bg-gradient-to-r from-red-600/10 to-red-500/5 px-2.5 py-1 text-xs font-medium text-foreground sm:px-3 sm:py-1.5 sm:text-sm"
                         >
                           {project}
                         </span>

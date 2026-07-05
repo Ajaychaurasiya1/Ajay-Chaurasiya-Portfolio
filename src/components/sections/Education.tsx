@@ -42,7 +42,7 @@ export function Education() {
         </TiltCard>
 
         {/* Stats */}
-        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="mb-12 grid grid-cols-4 gap-2 sm:gap-4">
           {educationSection.stats.map((stat, i) => (
             <TiltCard
               key={stat.label}
@@ -63,7 +63,7 @@ export function Education() {
 
         {/* Timeline */}
         <div className="relative w-full">
-          <div className="absolute top-0 bottom-0 left-6 hidden w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8 sm:block" />
+          <div className="absolute top-0 bottom-0 left-4 w-px bg-gradient-to-b from-red-600/40 via-red-500/20 to-transparent sm:left-8" />
 
           <div className="space-y-8">
             {education.map((edu, index) => (
@@ -73,15 +73,15 @@ export function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-0 sm:pl-20"
+                className="relative pl-12 sm:pl-20"
               >
-                <div className="absolute top-8 left-0 hidden h-4 w-4 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:block" />
+                <div className="absolute top-8 left-2.5 h-3 w-3 rounded-full border-2 border-accent bg-background sm:left-[1.65rem] sm:h-4 sm:w-4" />
 
                 <TiltCard
                   maxTilt={8}
-                  className="rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
+                  className="rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm sm:p-8"
                 >
-                  <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                  <div className="mb-6 flex flex-row flex-wrap items-start justify-between gap-4">
                     <div className="flex items-start gap-4">
                       <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <GraduationCap className="h-7 w-7 text-accent" />
@@ -103,7 +103,7 @@ export function Education() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 text-sm text-muted lg:items-end">
+                    <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 shrink-0 text-accent" />
                         <span>{edu.duration}</span>
