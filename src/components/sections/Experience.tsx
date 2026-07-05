@@ -69,7 +69,7 @@ export function Experience() {
                   maxTilt={8}
                   className="rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm sm:p-8"
                 >
-                  <div className="mb-6 flex flex-row flex-wrap items-start justify-between gap-4">
+                  <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex min-w-[12rem] flex-1 items-start gap-3 sm:gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 sm:h-14 sm:w-14">
                         <Building2 className="h-6 w-6 text-accent sm:h-7 sm:w-7" />
@@ -95,7 +95,7 @@ export function Experience() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col gap-2 text-sm text-muted sm:items-end">
+                    <div className="flex flex-col gap-2 text-sm text-muted lg:items-end">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 shrink-0 text-accent" />
                         <span>{exp.duration}</span>
@@ -128,7 +128,7 @@ export function Experience() {
                     </div>
                   </div>
 
-                  <div className="mb-6 grid grid-cols-2 gap-4 lg:gap-6">
+                  <div className="mb-6 grid gap-6 lg:grid-cols-2">
                     <div>
                       <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
                         <Briefcase className="h-4 w-4 text-accent" />

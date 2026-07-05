@@ -42,7 +42,7 @@ export function Education() {
         </TiltCard>
 
         {/* Stats */}
-        <div className="mb-12 grid grid-cols-4 gap-2 sm:gap-4">
+        <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {educationSection.stats.map((stat, i) => (
             <TiltCard
               key={stat.label}
@@ -81,7 +81,7 @@ export function Education() {
                   maxTilt={8}
                   className="rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm sm:p-8"
                 >
-                  <div className="mb-6 flex flex-row flex-wrap items-start justify-between gap-4">
+                  <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                     <div className="flex items-start gap-4">
                       <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <GraduationCap className="h-7 w-7 text-accent" />

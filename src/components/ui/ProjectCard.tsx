@@ -34,8 +34,8 @@ export function ProjectCard({
       transition={{ duration: 0.5, delay: index * 0.08 }}
       maxTilt={12}
       onClick={onClick}
-      className={cn(
-        "group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 hover:bg-card",
+        className={cn(
+        "group relative flex min-w-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm transition-colors hover:border-red-500/40 hover:bg-card sm:p-6",
         className
       )}
     >
@@ -68,7 +68,7 @@ export function ProjectCard({
           {project.type}
         </p>
 
-        <h3 className="mb-2 text-xl font-semibold text-foreground">
+        <h3 className="mb-2 text-base font-semibold text-foreground sm:text-xl">
           {project.title}
         </h3>
 

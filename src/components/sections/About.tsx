@@ -42,7 +42,7 @@ export function About() {
           maxTilt={6}
           className="mb-12 rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-8"
         >
-          <div className="mb-6 flex flex-row flex-wrap items-center justify-between gap-4">
+          <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-red-600/20 to-red-500/10 text-2xl font-bold text-accent">
                 AC
@@ -101,7 +101,7 @@ export function About() {
           </TiltCard>
 
           {/* Focus area cards */}
-          <div className="grid grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             {about.focusAreas.map((area, i) => {
               const Icon = focusIcons[i] ?? Globe;
               return (
@@ -112,13 +112,13 @@ export function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   maxTilt={8}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
+                  className="group flex min-w-0 flex-col rounded-2xl border border-card-border bg-card/50 p-4 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="mb-1 text-lg font-semibold text-foreground sm:text-xl">
                         {area.title}
                       </h4>
@@ -217,7 +217,7 @@ export function About() {
           </TiltCard>
 
           {/* Strength cards */}
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-6">
+          <div className="grid gap-6 lg:grid-cols-3">
             {about.highlights.map((item, i) => {
               const Icon = highlightIcons[i] ?? Layers;
               return (
@@ -228,13 +228,13 @@ export function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   maxTilt={8}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
+                  className="group flex min-w-0 flex-col rounded-2xl border border-card-border bg-card/50 p-4 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="mb-1 text-lg font-semibold text-foreground">
                         {item.title}
                       </h4>

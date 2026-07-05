@@ -58,7 +58,7 @@ export function TiltCard({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className={cn("transition-transform will-change-transform", className)}
+      className={cn("min-w-0 transition-transform will-change-transform", className)}
       {...props}
     >
       {children}

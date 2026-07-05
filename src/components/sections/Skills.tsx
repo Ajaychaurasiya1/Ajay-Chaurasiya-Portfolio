@@ -56,7 +56,7 @@ export function Skills() {
           <h3 className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-accent">
             Technical Skills
           </h3>
-          <div className="grid grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             {skillCategories.map((category, catIndex) => {
               const Icon = categoryIcons[catIndex] ?? Layers;
               return (
@@ -67,7 +67,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: catIndex * 0.1 }}
                   maxTilt={8}
-                  className="group rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm transition-colors hover:border-red-500/40 sm:p-7"
+                  className="group min-w-0 rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">
@@ -145,7 +145,7 @@ export function Skills() {
             <h4 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted">
               My Workflow
             </h4>
-            <div className="grid grid-cols-2 gap-2 lg:grid-cols-5 lg:gap-4">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {skillsSection.development.workflow.map((item, i) => (
                 <TiltCard
                   key={item.step}
@@ -154,7 +154,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
                   maxTilt={7}
-                  className="relative rounded-2xl border border-card-border bg-card/50 p-3 text-center backdrop-blur-sm lg:p-5"
+                  className="relative rounded-2xl border border-card-border bg-card/50 p-4 text-center backdrop-blur-sm sm:p-5"
                 >
                   <p className="mb-2 text-2xl font-bold gradient-text">
                     {item.step}
@@ -177,7 +177,7 @@ export function Skills() {
           <h4 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted">
             Core Practices
           </h4>
-          <div className="grid grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid gap-6 lg:grid-cols-2">
             {skillsSection.development.practices.map((practice, i) => {
               const Icon = practiceIcons[i] ?? Code2;
               return (
@@ -188,7 +188,7 @@ export function Skills() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   maxTilt={8}
-                  className="group flex flex-col rounded-2xl border border-card-border bg-card/50 p-6 transition-colors hover:border-red-500/40 sm:p-7"
+                  className="group flex min-w-0 flex-col rounded-2xl border border-card-border bg-card/50 p-4 transition-colors hover:border-red-500/40 sm:p-7"
                 >
                   <div className="mb-5 flex items-start gap-4">
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10 transition-transform group-hover:scale-105">

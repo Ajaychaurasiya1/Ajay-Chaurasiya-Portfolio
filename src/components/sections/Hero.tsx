@@ -82,7 +82,7 @@ export function Hero() {
           {/* Highlight cards */}
           <motion.div
             {...fadeUp(0.25)}
-            className="mb-10 grid w-full grid-cols-2 gap-4 lg:grid-cols-4"
+            className="mb-10 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
           >
             {hero.highlights.map((highlight, index) => {
               const Icon = highlightIcons[index] ?? Sparkles;
@@ -90,15 +90,15 @@ export function Hero() {
               return (
                 <TiltCard
                   key={highlight.title}
-                  className="rounded-2xl border border-card-border bg-card/50 p-5 text-left backdrop-blur-sm sm:p-6"
+                  className="rounded-2xl border border-card-border bg-card/50 p-4 text-left backdrop-blur-sm sm:p-6"
                 >
                   <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
-                  <h3 className="mb-2 text-base font-semibold text-foreground sm:text-lg">
+                  <h3 className="mb-2 text-sm font-semibold text-foreground sm:text-lg">
                     {highlight.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-muted">
+                  <p className="text-xs leading-relaxed text-muted sm:text-sm">
                     {highlight.description}
                   </p>
                 </TiltCard>
@@ -132,7 +132,7 @@ export function Hero() {
           {/* CTAs */}
           <motion.div
             {...fadeUp(0.4)}
-            className="mb-12 flex flex-row flex-wrap items-center justify-center gap-4"
+            className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <Button href={hero.ctaPrimary.href} size="lg">
               <Code2 className="h-5 w-5" />
@@ -146,7 +146,7 @@ export function Hero() {
           {/* Stats */}
           <motion.div
             {...fadeUp(0.45)}
-            className="grid w-full grid-cols-4 gap-px overflow-hidden rounded-2xl border border-card-border bg-card-border"
+            className="grid w-full grid-cols-2 gap-px overflow-hidden rounded-2xl border border-card-border bg-card-border sm:grid-cols-4"
           >
             {hero.stats.map((stat) => (
               <div
