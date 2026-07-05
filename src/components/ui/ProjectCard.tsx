@@ -34,12 +34,20 @@ export function ProjectCard({
       transition={{ duration: 0.5, delay: index * 0.08 }}
       maxTilt={12}
       onClick={onClick}
-        className={cn(
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          onClick();
+        }
+      }}
+      className={cn(
         "group relative flex min-w-0 cursor-pointer flex-col overflow-hidden rounded-2xl border border-card-border bg-card/50 p-4 backdrop-blur-sm transition-colors hover:border-red-500/40 hover:bg-card sm:p-6",
         className
       )}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-red-500/5 opacity-0 transition-opacity group-hover:opacity-100" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-red-600/5 to-red-500/5 opacity-0 transition-opacity group-hover:opacity-100" />
 
       <div className="relative flex flex-1 flex-col">
         <div className="mb-4 flex items-start justify-between gap-3">
