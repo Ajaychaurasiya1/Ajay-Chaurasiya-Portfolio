@@ -72,7 +72,7 @@ export function Contact() {
         </div>
 
         {/* Main contact grid */}
-        <div className="mb-12 grid grid-cols-2 items-stretch gap-4 lg:gap-8">
+        <div className="mb-12 grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
           {/* Left: social */}
           <div className="flex flex-col gap-6">
             <TiltCard
@@ -86,7 +86,7 @@ export function Contact() {
               <h3 className="mb-5 text-sm font-semibold uppercase tracking-widest text-accent">
                 Connect With Me
               </h3>
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
+              <div className="grid flex-1 grid-cols-2 gap-2 sm:gap-3 lg:flex lg:flex-col lg:gap-3">
                 {socialLinks.map((link, i) => {
                   const Icon = iconMap[link.icon];
                   return (
@@ -103,7 +103,7 @@ export function Contact() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: i * 0.06 }}
-                      className="flex h-full min-h-[68px] items-center gap-2 rounded-xl border border-card-border bg-background/30 p-3 transition-colors hover:border-red-500/40 hover:bg-card sm:min-h-[76px] sm:gap-3 sm:p-4"
+                      className="flex h-full min-h-[68px] items-center gap-2 rounded-xl border border-card-border bg-background/30 p-3 transition-colors hover:border-red-500/40 hover:bg-card sm:min-h-[76px] sm:gap-3 sm:p-4 lg:w-full"
                     >
                       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-600/20 to-red-500/10">
                         <Icon className="h-5 w-5 text-accent" />
