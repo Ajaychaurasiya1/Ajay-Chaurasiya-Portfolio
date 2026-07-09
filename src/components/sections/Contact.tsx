@@ -122,13 +122,12 @@ export function Contact() {
           </div>
 
           {/* Right: contact form */}
-          <TiltCard
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.05 }}
-            maxTilt={8}
-            className="h-full"
+            className="relative z-10 h-full"
           >
             <div className="flex h-full flex-col rounded-2xl border border-card-border bg-card/50 p-6 backdrop-blur-sm sm:p-7">
               <div className="mb-6">
@@ -142,7 +141,7 @@ export function Contact() {
               </div>
               <ContactForm />
             </div>
-          </TiltCard>
+          </motion.div>
         </div>
 
         {/* Open to: full width, uniform cards */}

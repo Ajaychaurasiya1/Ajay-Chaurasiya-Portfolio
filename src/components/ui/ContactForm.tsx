@@ -15,20 +15,20 @@ interface FormData {
 const initialForm: FormData = { name: "", email: "", message: "" };
 
 const fieldVariants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 12 },
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.45,
-      delay: index * 0.08,
+      duration: 0.4,
+      delay: index * 0.06,
       ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 };
 
 const inputClassName =
-  "w-full rounded-xl border border-card-border bg-background/50 px-4 py-3 text-foreground outline-none transition-all duration-300 ease-out placeholder:text-muted/50 focus:border-red-500/60 focus:bg-background/70 focus:ring-2 focus:ring-red-500/15 disabled:cursor-not-allowed disabled:opacity-60";
+  "relative z-10 w-full rounded-xl border border-card-border bg-background/80 px-4 py-3 text-foreground outline-none transition-all duration-300 ease-out placeholder:text-muted/50 focus:border-red-500/60 focus:bg-background focus:ring-2 focus:ring-red-500/15 disabled:cursor-not-allowed disabled:opacity-60";
 
 export function ContactForm() {
   const [form, setForm] = useState<FormData>(initialForm);
@@ -55,7 +55,7 @@ export function ContactForm() {
     }
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
@@ -91,12 +91,11 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="relative z-10 space-y-5">
       <motion.div
         custom={0}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
+        animate="visible"
         variants={fieldVariants}
       >
         <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
@@ -104,6 +103,7 @@ export function ContactForm() {
         </label>
         <input
           id="name"
+          name="name"
           type="text"
           value={form.name}
           onChange={(e) => updateField("name", e.target.value)}
@@ -118,8 +118,7 @@ export function ContactForm() {
       <motion.div
         custom={1}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
+        animate="visible"
         variants={fieldVariants}
       >
         <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
@@ -127,6 +126,7 @@ export function ContactForm() {
         </label>
         <input
           id="email"
+          name="email"
           type="email"
           value={form.email}
           onChange={(e) => updateField("email", e.target.value)}
@@ -141,8 +141,7 @@ export function ContactForm() {
       <motion.div
         custom={2}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
+        animate="visible"
         variants={fieldVariants}
       >
         <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
@@ -150,6 +149,7 @@ export function ContactForm() {
         </label>
         <textarea
           id="message"
+          name="message"
           rows={5}
           value={form.message}
           onChange={(e) => updateField("message", e.target.value)}
@@ -164,11 +164,10 @@ export function ContactForm() {
         {status === "success" && (
           <motion.div
             key="success"
-            initial={{ opacity: 0, y: 8, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "auto" }}
-            exit={{ opacity: 0, y: -8, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white">
               <CheckCircle2 className="h-4 w-4 shrink-0 text-red-400" />
@@ -180,11 +179,10 @@ export function ContactForm() {
         {status === "error" && (
           <motion.div
             key="error"
-            initial={{ opacity: 0, y: 8, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "auto" }}
-            exit={{ opacity: 0, y: -8, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3 text-sm text-red-300">
               {errorMessage}
@@ -196,29 +194,25 @@ export function ContactForm() {
       <motion.div
         custom={3}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
+        animate="visible"
         variants={fieldVariants}
       >
         <Button
           type="submit"
           disabled={status === "loading"}
-          className="w-full transition-all duration-300 sm:w-auto disabled:cursor-not-allowed disabled:opacity-70"
+          className="relative z-10 w-full transition-all duration-300 sm:w-auto disabled:cursor-not-allowed disabled:opacity-70"
         >
-          <motion.span
-            key={status === "loading" ? "loading" : "idle"}
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
-            className="inline-flex items-center gap-2"
-          >
-            {status === "loading" ? (
+          {status === "loading" ? (
+            <>
               <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
+              Sending...
+            </>
+          ) : (
+            <>
               <Send className="h-4 w-4" />
-            )}
-            {status === "loading" ? "Sending..." : "Send Message"}
-          </motion.span>
+              Send Message
+            </>
+          )}
         </Button>
       </motion.div>
     </form>
